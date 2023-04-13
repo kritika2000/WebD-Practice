@@ -1,0 +1,39 @@
+.container{
+    width: 500px;
+    height: 100px;
+    background-color: pink;
+    /* font-size: 0; */
+}
+.container div{
+    /* width: 25%;  */
+    height: 50px;
+    text-align: center;
+    font-size: 1em;
+}
+.box1{
+    background-color: aqua;
+    width: 50px;
+    float: left;
+    /* display: inline-block; */
+}
+.box2{
+    background-color: rebeccapurple;
+    width: 150px;
+    /* margin-left: 200px; */
+    /* clear: left; */
+    /* float: left; */
+    /* margin: 0; */
+    /* display: inline-block; */
+    
+}
+.box3{
+    width: 150px;
+    background-color: red;
+    /* display: inline-block; */
+}
+.box4{
+    width: 100px;
+    background-color: beige;
+    /* display: inline-block; */
+    /* float: left; */
+}

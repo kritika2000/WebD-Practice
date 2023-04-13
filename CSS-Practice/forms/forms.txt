@@ -1,0 +1,20 @@
+The method attribute of the form element tells 
+the browser how to send form data to a web server.
+
+GET -> 
+1. Specifying a value of GET means the browser 
+will add the form contents to the end of the URL.
+2. used in case of simple forms where security in not a concern.
+
+POST-> 
+1. data will be sent to the web server.
+2. necessary for storing data in database.
+
+"name" attribute is required in <input> if you want to send field values
+back to the server on a form submission, it is sent with the form data
+as name/value pair whereas "id" is used 
+for basic DOM operations.
+
+
+
+

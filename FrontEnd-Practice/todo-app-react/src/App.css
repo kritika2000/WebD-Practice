@@ -1,0 +1,127 @@
+.todo--app{
+  height: 100vh;
+  width: 100vw;
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: aquamarine; */
+}
+.todo--layout--container{
+  display: flex;
+  justify-content: center;
+}
+.mode--container{
+  position: absolute;
+  top: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+.mode--container h2{
+  color: white;
+}
+.mode--container img{
+  height: 2em;
+  margin-right: 3em;
+}
+.icon--check--container{
+  height: 1.4em;
+  width: 1.4em;
+  border: solid 1px gray;
+  border-radius: 1.5em;
+  display: inline-block;
+  text-align: center;
+}
+.icon--check--container.check{
+  background-image: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo--list--container, .todo--input{
+  position: absolute;
+  top: 10em;
+}
+.todo--list--container{
+  margin-top: 5em;
+  width: 25em;
+  display: grid;
+  row-gap: .2em;
+  grid-auto-rows: 3em;
+}
+:is(.todo--container) div, p{
+  margin-left: .5em;
+  color: white;
+}
+.todo--container{
+  display: flex;
+  align-items: center;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.todo--container.dark{
+  background-color: hsl(235, 21%, 11%);
+}
+.todo--container.light{
+  background-color: white;
+}
+.todo--input{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: .4em;
+  height: 2.5em;
+  width: 25em;
+}
+.todo--text.light{
+  color: hsl(235, 21%, 11%);
+}
+.todo--text.dark{
+  color: white;
+}
+.todo--input button{
+  border: none;
+  border-radius: .2em;
+  color: white;
+}
+.button.dark{
+  background-color: hsl(235, 21%, 11%);
+}
+.button.light{
+  background-color: white;
+  color: hsl(235, 21%, 11%);
+}
+.todo--text.strikethrough{
+  text-decoration: line-through;
+  color: gray;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,11 @@
+.nav--container{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    background-color: #F55A5A;
+}
+.nav--container span{
+    color: #FFFFFF;
+    font-weight: 500;
+}

@@ -1,0 +1,2 @@
+Creating spearate bundles for each js file and loading
+only the required bundle for the page not the one entire bundle file.

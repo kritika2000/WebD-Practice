@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Shantell+Sans:wght@300&display=swap');
+
+html{
+    font-family: 'Shantell Sans', cursive;
+}
+
+body{
+    padding: 5% 10%;
+    font-size: 1rem;
+}
+
+ol{
+    /* 
+        list-style-type is to style the list item numbers in ol and ul,
+        for ol it is decimal and ul it is disc by default.
+        we have vaules disc, circle, roman, lower-alpha(for alphabets) etc.
+    */
+    list-style-type: decimal;
+}
+
+/* The ::marker CSS pseudo-element selects the marker box of a list item, 
+which typically contains a bullet or number, overridden by list-style if set already */
+::marker{
+    content: "."
+}
+
+ul{
+    list-style-type: square;
+    /* only text-align center will center the text mot bullets points  */
+    text-align: center;
+
+    /* 
+        The list-style-position property specifies the position of the 
+        list-item markers (bullet points). 
+        https://www.w3schools.com/cssref/pr_list-style-position.php#:~:text=The%20list%2Dstyle%2Dposition%20property,Tea
+    */
+
+    list-style-position: outside;
+    /* color will change the text color */
+    color: blue;
+
+    /* leave gaps between list items */
+    line-height: 1.6;
+    /* 
+        instead of bullets we can use an image to indicate the item
+        instead of using a flex box to align an image and text together
+        we can use this method(<li><img src="image"><p></p></li>
+    */
+    list-style-image: url(checkmark.png);
+}
+
+/* 
+    change the second list item in an unordered list
+*/
+ul li:nth-child(2){
+    color: pink;
+}
+
+/* apply styles on the list markers/(bullets, numbers etc) */
+/* css content property -> https://www.w3schools.com/cssref/pr_gen_content.php */

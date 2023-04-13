@@ -1,0 +1,39 @@
+.card--container{
+    padding: 25px 40px;
+    display: flow-root;
+}
+.info--container{
+    box-sizing: border-box;
+    height: 130px;
+    margin: 19px 0;
+}
+.location--container{
+}
+.description{
+    margin-top: 5px;
+}
+.location--container, .description{
+    font-weight: 400;
+    font-size: 10.24px;
+}
+.location--container a{
+    color: #918E9B;
+    margin-left: 10px;
+}
+.location--container span{
+    text-transform: uppercase;
+}
+.date{
+    font-weight: 700;
+    font-size: 10.24px;
+    line-height: 12px;
+    margin: 15px 0 8px;
+}
+.image{
+    float: left;
+    margin-right: 10px;
+}
+.title{
+    margin: 5px 0;
+}
+

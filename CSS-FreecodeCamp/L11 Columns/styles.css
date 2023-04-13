@@ -1,0 +1,61 @@
+.columns{
+    /* 
+        create 4 columns of the elements inside this containers.
+        If we have p paragraphs, then they will be the 4 columns 
+        in the section element.
+    */
+    column-count: 4;
+    /* 
+        column width will not be below 250px, but if the browser is resized
+        it only supports number of columns that it can contain.
+        Without this, the container will contain 4 columns not matter what and if 
+        the browser is resized, the column width will be reduced. So by setting the 
+        column-width we are fixing the width of the column.
+
+    */
+    column-width: 250px;
+    /* 
+        column(shorthand): count column-width -> column: 4 250px 
+    */
+    /* 
+        add a divider between the columns, it will disappear when there is only one column.
+    */
+    column-rule: 3px solid black;
+
+    /* add spacing between columns(around the dividers if exist) */
+    column-gap: 3em;
+
+}
+
+ /* 
+        Right Now we've a problem, as all the paragraphs have default margin(top/bottom) of 1em set,
+        which gives spacing between various paragraphs but when the columns reduces due to browser 
+        resizing and column-width property set, one paragraph can start from below the previous paragraphs
+        this is how the columns are reduced, this will cause the paragraphs starting midway in a new column
+        applying not top margin.
+        We can set the top margin to all paras to 0.
+*/
+
+.columns p{
+    margin-top: 0;
+}
+
+.columns h2{
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    /* will not split the header */
+    break-inside: avoid;
+}
+
+.columns .quote{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    /* spans or covers all the columns */
+    column-span: all;
+}
+
+/* https://symbl.cc/en/ for unicode characters */

@@ -1,0 +1,26 @@
+.sidebar--container{
+    background-color:  hsl(240, 100%, 5%);
+    padding: 1.5em;
+    margin: 1em;
+}
+.sidebar--container div{
+    color: orange;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 0 1em;
+}
+.sidebar--container ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar--container ul li h3{
+   color: hsl(36, 100%, 99%);
+   margin: 0 0 .6em;
+}
+.sidebar--container ul li p{
+    color: hsl(233, 8%, 79%);
+    margin-top: 0;
+}
+hr{
+    margin: 2em 0;
+}

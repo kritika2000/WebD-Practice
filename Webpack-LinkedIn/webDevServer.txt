@@ -1,0 +1,6 @@
+Another nice feature of webpack is that it allows you to 
+set up a development server that will automatically reload your 
+project when things change.
+Webpack dev server uses a node JS express server.
+
+npm install web-dev-server.

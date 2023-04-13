@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RequireJS</title>
+    <!-- require.js loads here first and then config.js will be loaded -->
+    <script data-main="config" src="require.js"></script>
+    <script>
+        //when using require js one is needed to wite 
+        //the code inside require function only
+        //require again loads the config.js
+        //This file would be a base file for your app which will contain all the
+        //instructions that you want to send to the requirejs lib
+        require(['config'], function () {// this function will only execute when the file will get loaded
+            //all your code
+            // console.log('Hello World!')
+            require(['first'])
+            // require(['firstSub'])
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

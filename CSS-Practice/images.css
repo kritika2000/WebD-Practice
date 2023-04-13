@@ -1,0 +1,17 @@
+.container{
+   height: 600px;
+   width: 600px;
+   border: 5px ridge purple;
+   background-color: aquamarine;
+}
+img{
+   /* max-width: 100%; */
+   /* width: 100%; */
+   /* image will scale down to fit the container */
+   width: 80%;
+   height: 80%;
+   /* responds to height and width only */
+   object-fit: cover;
+   object-position: center;
+   background-color: antiquewhite;
+}

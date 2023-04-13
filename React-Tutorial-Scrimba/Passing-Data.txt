@@ -1,0 +1,5 @@
+We can't pass data between sibling components.
+We pass data from parent to child using props.
+There is no way to pass data from child to parent as well.
+We can raise the state up and pass it down to all child components.
+Keep state local as you can or closer to the components requiring it.

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Inputs</title>
+  </head>
+  <body>
+    <article>
+      <h2>Contact Me</h2>
+      <p>I'd really like to hear from you.</p>
+      <!-- 
+        We add a form element with action attribute.
+        action Attribute is used to specify where the form data is to be sent to the server 
+        after the submission of the form.
+        method attribute -> https://www.w3schools.com/tags/att_form_method.asp#:~:text=The%20method%20attribute%20specifies%20how,URL%20in%20name%2Fvalue%20pairs
+      -->
+      <form action="https://httpbin.org/get" method="get">
+        <!-- 
+            label is used to decribe the form controls.
+            It has a for attribute that must match with the id of an input
+            control to label the control.
+         -->
+        <!-- we use fieldset to divide our form into different sections. -->
+        <fieldset>
+          <legend>Personal Info</legend>
+          <div>
+            <label for="firstName">First Name:</label>
+            <!-- 
+            input has a 
+
+            type attribute which define what values it can take.
+
+            id attribute which must match with the label.
+
+            name attribute is for labelling the input data/text with the name
+            specified by this attribute on the server.
+
+            placeholder defines what to enter to help the user(Example data).
+
+            autocomplete attribute accepts on/off values. ON means it will remember the 
+            previous inputs and suggest those when entering a new value.
+
+            autofocus -> only one form element can have autofocus because it can't focus
+            more that one element at a time. It puts the focus in the input when the page loads.
+          -->
+
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="Jane"
+              autocomplete="on"
+              autofocus
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Doe"
+              autocomplete="on"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <!-- autocomplete is not supported on passwords. -->
+            <label for="password">Password:</label>
+            <!-- because type=password it doesn't let see the user what is typed in -->
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              placeholder="password"
+            />
+          </div>
+          <br />
+          <div>
+            <!-- 
+           The pattern attribute specifies a regular expression that the <input> 
+           element's value is checked against on form submission. We usually set a pattern
+           for the number for validation
+          type tel brings up numeric keypad on the screen.
+           -->
+            <label for="phone">Phone No:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              placeholder="5555555555555"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            />
+          </div>
+          <br />
+          <!-- 
+          input type number has a step attribute to set an interval.
+
+          min, max -> to give the min and max values or specifies a range.
+
+          value attribute give a starting value to the input.
+         -->
+          <div>
+            <label for="decade">Favourite Decade:</label>
+            <input
+              type="number"
+              name="decade"
+              id="decade"
+              required
+              min="1960"
+              max="2020"
+              step="10"
+              value="1980"
+            />
+          </div>
+          <br />
+          <!-- 
+          use select element to sect a value out of many given options.
+          inside select we put options using <option> element. -->
+          <div>
+            <label for="coffee">Favourite Coffee</label>
+            <select name="coffee" id="coffee">
+              <!-- 
+              use won't see the value mentioned by the value attribute
+              but see the value put between tags instead.
+
+              The value attribute(option) specifies the value to be sent to a server when 
+              a form is submitted. The content between the opening <option> and 
+              closing </option> tags is what the browsers will display in a 
+              drop-down list. However, the value of the value attribute is 
+              what will be sent to the server when a form is submitted
+
+              the first option we will displayed as the initial value by default.
+              We can set a different value by adding a selevted value to one of the options.
+
+              optgroup groups options and we can set a label to them.
+             -->
+              <optgroup label="Coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+              <optgroup label="Espresso Drinks">
+                <option value="latte" selected>Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="americano">Americano</option>
+                <option value="other">Other</option>
+              </optgroup>
+            </select>
+            <br />
+            <div>
+              <!-- datalist can handle search on the input and display the values accordingly. -->
+              <label for="coffeeList">Favourite Coffee List</label>
+              <input id="coffeeList" list="coffee-list" />
+              <datalist id="coffee-list">
+                <option value="latte"></option>
+                <option value="cappuccino"></option>
+                <option value="americano"></option>
+                <option value="other"></option>
+              </datalist>
+            </div>
+          </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>What is your favaourite food</legend>
+          <!-- 
+            radio inputs have same name as we can select one value only.
+            The radio group must have share the same name (the value of the 
+            name attribute) to be treated as a group. Once the radio group 
+            is created, selecting any radio button in that group automatically
+            deselects any other selected radio button in the same group.
+            You can have as many radio groups on a page as you want, as 
+            long as each group has its own name.
+            The value attribute defines the unique value associated with 
+            each radio button. The value is not shown to the user, but is 
+            the value that is sent to the server on "submit" to identify 
+            which radio button that was selected.
+           -->
+          <p>
+            <input type="radio" id="tacos" name="food" value="tacos" />
+            <label for="tacos">Tacos</label>
+          </p>
+          <p>
+            <input type="radio" id="pizza" name="food" value="pizza" />
+            <label for="pizza">Pizza</label>
+          </p>
+          <p>
+            <input type="radio" id="other" name="food" value="other" />
+            <label for="other">Other</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Do you have pets?</legend>
+          <p>
+            <input type="checkbox" id="dog" name="pets" value="dog" />
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" id="cat" name="pets" value="cat" />
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" id="fish" name="pets" value="fish" />
+            <label for="fish">Fish</label>
+          </p>
+        </fieldset>
+        <!-- little more semantic that input type button. -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </article>
+  </body>
+</html>
+
+<!-- 
+    Forms allow users to give input 
+-->
+
+<!-- 
+  On submission we get:-
+  {
+"coffee": "latte",
+"decade": "1980",
+"firstName": "Jane",
+"food": "tacos",
+"lastName": "Doe",
+"password": "dskjfb",
+"pets": [
+"dog",
+"fish"
+],
+"phone": "8860885053"
+}
+ -->

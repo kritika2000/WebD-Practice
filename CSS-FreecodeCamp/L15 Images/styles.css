@@ -1,0 +1,167 @@
+/* 
+    foreground images -> images on the page.
+    background images -> images in the background.
+    images are inline elements.
+    Background image never overflow.
+*/
+
+/* Begin Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    /* 
+        A typical characteristic of inline elements is that 
+        they respect the whitespace in the markup. 
+        There are many solutions to solve this mentioned below.
+        https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements
+        But we can make the image a block element also, to remove the extra spacing.
+    */
+    display: block;
+}
+/* End Reset */
+
+/* Utility Classes */
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.offscreen{
+    /* fig-caption is gone */
+    position: absolute;
+    left: -100000px;
+}
+
+/* End Utility Classes */
+
+body{
+    min-height: 100vh;
+    /* styles for body part-3 */
+    background-color: aliceblue;
+    /* 
+        linear gradient changes color from one to another in different directions
+        - We can put as many colors we want.
+        - to left -> starts with right and go to left -> linear-gradient(to left, steelblue, #fff)
+        - to right -> starts with left to right.
+        - to top -> bottom to top.
+        - to bottom -> top to bottom
+    */
+    /* first value for the image and second for the linear-gradient */
+    background-image: url('/L15\ Images/img/bubbles.png'), 
+                      linear-gradient(to left, steelblue, #fff);
+    background-repeat: repeat-y, no-repeat;
+    background-position: right;
+    background-size: 30%, auto;
+}
+
+.container{
+    background-color: rgb(251, 210, 156);
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url('/L15\ Images/img/map-2176x1451.png');
+    /* position the image inside it's container, x-axis y-axis */
+    /* background-position: bottom center; */
+    background-image: top;
+}
+
+.hero{
+    border: 2px solid #000;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    /* fallback background color for the section if the image doesn't load */
+    /* background-color: rgb(251, 210, 156); */
+
+    /* by default the image is a repeating pattern both on x and y axis to cover the background */
+    /* background-image: url('/L15\ Images/img/pat2-transparency.png'); */
+
+    /* this image is very huge by default but as a background image it 
+    is showing only a part of it, can change it using background-size property. */
+    /* background-image: url('/L15\ Images/img/scenic-2200x1331.png'); */
+
+    /* by default it is repeat(repeat-x repeat-y) */
+    /* background-repeat: repeat; */
+
+    /* cover(suitable option) covers the entire background and leave no gaps and maintain the aspect ratio */
+    /* contains leave gaps and maintain the aspect ratio */
+    /* background-size: cover; */
+
+    /* background-image: url('/L15\ Images/img/map-2176x1451.png'); */
+    /* moving background properties to the div container */
+    background-color: hsla(0, 0%, 100%, .403);
+}
+
+
+.h1{
+    font-size: 500%;
+    color: aliceblue;
+    /* 
+        text-shadow helps text stand out a bit.
+        text-shadow: x-axis y-axis blur-radius color
+    */
+    text-shadow: 3px 3px 5px black;
+    /* background-color: #00000039;
+    padding: .25rem;
+    border-radius: 10px; */
+}
+
+.profile-pic-figure{
+    /* 35% of the section.hero(which is 100% of the whole 
+    page by default as it is a block element.  */
+    width: 35%;
+    /* border: 1px solid blue; */
+    padding: .5em;
+}
+
+.profile-pic-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example{
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img{
+    /* 
+        we need to set the height also to override the value in html.
+        height = auto, means that the height will be adjusted according to 
+        the width to maintain the aspect ratio.
+     */
+     /* 25% of the container width, this will be an responsive image(as the window resizes) */
+    width: 25%;
+    height: auto;
+}
+
+/* .example p{
+    border: 1px solid black;
+    margin: 10px;
+    width: fit-content;
+} */
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('/L15\ Images/img/scenic-2200x1331.png');
+    background-size: 100%;
+    text-transform: uppercase;
+    /* The background is painted within (clipped to) the foreground text. */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}

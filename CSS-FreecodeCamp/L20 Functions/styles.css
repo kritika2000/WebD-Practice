@@ -1,0 +1,181 @@
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    Often used CSS functions:-
+    min(2.25rem, 3vh) -> select smallest of the two values.
+    max(x, y) -> select maximum of the two.
+    For min, max functions choose one absolute and another a relative value(3vh).
+    better to use clamp() function
+
+*/
+
+:root{
+    
+    /* :root represents HTML(highest node) in the DOM but it has higher specificity than <html> 
+        we define custome properties here and use them in the code. These properties inherit.
+        This means that if no value is set for a custom property on a given element, 
+        the value of its parent is used.
+
+        .two {
+          --test: 10px;
+        }
+        .three {
+          --test: 2em;
+        }
+    */
+    --FS: min(2.25rem, 3vh);
+    --FS-XL: 3rem;
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1E293B;
+    /* we can create two variables and assign them same values. */
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    /* REPLACE THIS SHADOW IN OTHER PART OF THE DOCUMENT ALSO. */
+    --SHADOW: 0 6px 10px -5px var(--ALT-BGCOLOR);
+    --PADDING: .5em;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    /* red is a fallback color if --BGCOLOR is ot defined yet. */
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR, red));
+    display: flex;
+    flex-direction: column;
+    font-size: var(--FS);
+}
+
+header, nav, footer{
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+header, footer{
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: whitesmoke;
+}
+
+header{
+    top: 0;
+}
+
+nav{
+    background-color: #fff;
+    color: black;
+    padding: .5rem;
+    border-bottom: 2px solid #000;
+    box-shadow: var(--SHADOW);
+}
+
+main{
+    flex-grow: 1;
+    padding: var(--PADDING);
+    /* padding: 10px, 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+main section{
+    flex-grow: 1;
+    padding: var(--PADDING);
+}
+
+main aside{
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: var(--LIGHT-COLOR);
+    font-size: var(--FS);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+
+footer{
+    bottom: 0;
+}
+
+.tooltip{
+    border-bottom: 1px dashed orange;
+    position: relative;
+}
+.tooltip:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+}
+
+a:hover, a:focus{
+    filter: brightness(200%);
+}
+
+@media screen and (min-width: 576px){
+    body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }
+    nav{
+        display: none;
+    }
+}
+/* MEDIUM */
+@media screen and (min-width: 768px){
+    body{
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }
+
+}
+/* LARGE */
+@media screen and (min-width: 992px){
+    body{
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }
+
+}
+/* X-LARGE */
+@media screen and (min-width: 1200px){
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }
+
+}
+
+/* MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 425px) and (min-aspect-ratio : 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+    }
+    h1, h2{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: none;
+    }
+
+}
+
+@media  screen and (min-width: 576px) {
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    main section{
+        width: calc(70% - 5px);
+    }
+    main aside{
+        width: calc(30% - 5px);
+    }
+}

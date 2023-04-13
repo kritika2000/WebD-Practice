@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Each page should have only one H1 but then
+        we can have multiple subheadings/topics.
+        Headers give semantic meaning to the page which is helpful
+        for any assistive technology.
+     -->
+    <h1>Lesson 2 Text Basics</h1>
+    <h1>Heading 1</h1>
+    <hr />
+    <!-- horizontal rule.-->
+    <h2>Heading 2</h2>
+    <p>
+      This is a paragraph 2
+      <!-- We add line breaks to see the text in next line as spaces in line collapse. -->
+      <br />
+      <!-- Line break-->
+      I learn more about web dev.
+      <br />
+      I use MDN resource.
+    </p>
+
+    <h3>Heading 3</h3>
+    <!-- &nbsp is an non-breaking space entity. -->
+    <p>This is a&nbsp;paragraph 3</p>
+
+    <!-- 
+        By adding <em> we're giving a semantic meaning to the text.
+        We're putting emphasis on the text, assistive technology will
+    emphasise on this text. 
+    In the browser it will italicize.
+ -->
+    <p>I've been working hard &lt; and <em>really needs a gateway</em>.</p>
+
+    <!-- strong is bold by default. -->
+    <p><strong>No way!</strong></p>
+
+    <h2>Entities</h2>
+    &lt;&nbsp;&copy;Kritika&nbsp;&gt;&amp;
+
+    <!-- The <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+    Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element. -->
+    <p>
+      This is an abbreviation <abbr title="Mozilla Developer Network">MDN</abbr>
+    </p>
+
+    <!-- address element tell the browser that this is an element.
+    It is a semantic tag. Browser automatically applies styling(italicize by default) corresponds to this element. -->
+    <address>FCA 627 'A' <br />SGM Nagar <br />Faridabad 121001</address>
+
+    <hr />
+  </body>
+</html>
+
+<!-- Spaces in lines won't be represented on the page, this is called 
+white space collapsing.  -->
+
+<!-- We have block level and inline(em, strong, b, i) elements. Block level(h1, p)
+    starts on a new line and inline do not.  -->
+
+<!-- strong depicts urgency, warning -->
+
+<!-- The <strong> element is for content that is of greater 
+importance, while the <b> element is used to draw attention 
+to text without indicating that it's more important
+Both are bold by default.
+Instead of using b tag to bold we should use font-weight css property.
+-->
+
+<!-- HTML entities https://www.w3schools.com/html/html_entities.asp#:~:text=A%20commonly%20used%20entity%20in,break%20into%20a%20new%20line). -->

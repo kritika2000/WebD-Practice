@@ -1,0 +1,104 @@
+.btn{
+    height: 35px;
+    width: 100px;
+    color: white;
+    background: linear-gradient(blue, pink, yellow); /*as many color stops as you want*/
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+}
+div{
+  margin-top: 10px;
+}
+.rightDir{
+    height: 75px;
+    width: 100px;
+    background: linear-gradient(to bottom right , blue, pink, green);
+}
+.angle{
+    height: 75px;
+    width: 100px;
+    background: linear-gradient(50deg , blue, pink);
+}
+.pos{
+    height: 75px;
+    width: 100px;
+    /* background: linear-gradient(to right, blue , red 30%, cyan 30%); */
+    /* background: linear-gradient(to right,
+      lime 25%, red 25%, red 50%, cyan 50%, cyan 75%, yellow 75% ); 
+      */
+      background: linear-gradient(blue, 50%, pink);
+
+}
+.image{
+    /* background images do not overflow but images with <img> tag can */
+    background-image: url("/resources/pexels-madison-inouye-1684880.jpg");
+    height: 200px;
+    width: 200px;
+    /*sets the size of the background image*/
+    background-color: #a52a2a;
+    background-size: auto 100%; 
+    background-repeat: no-repeat;
+    /* background-position: top 30px right 10px; */
+}
+
+.div1{
+    height: 100px;
+    width: 100px;
+    font-size: 25px;
+    background-color: brown;
+}
+.div2{
+    height: 2em;
+    width: inherit;
+    background-color: blue;
+}
+.box {
+    /* border: 10px solid rebeccapurple; */
+    /* border-radius: 50%; */
+    /* width: 50%; */
+    overflow: hidden;
+    background-color: bisque;
+    /* border-top-right-radius: 10% 30%; */
+  }
+
+  .border{
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      border-radius: 10px;
+      border-radius: 10px / 20px;
+      padding: 10px;
+      border: 10px dotted black;
+  }
+  .content{
+      font-size: 50px;
+      background-color: blue;
+      color: white;
+      background-clip: text;
+  }
+
+  .horizontal {
+    writing-mode: horizontal-tb;
+    display: inline-block;
+  }
+  
+  .vertical {
+    writing-mode: vertical-lr;
+   
+  }
+  .container1{
+    height: 300px;
+    width: 600px;
+    border: 5px ridge purple;
+    background-color: aquamarine;
+ }
+ .container1 div{
+     width: 300px;
+     height: 50%;
+     background-color: blueviolet;
+     margin: 0 auto;
+     text-align: center;
+ }
+      
+      

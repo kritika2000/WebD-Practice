@@ -1,0 +1,21 @@
+.button--container{
+    width: 247px;
+    background-color: #D1D5DB;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.icon{
+    width: 12.8px;
+    height: 9.6px; 
+    margin-right: 5px;
+}
+.icon--text{
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}

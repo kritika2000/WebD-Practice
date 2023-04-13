@@ -1,0 +1,75 @@
+/* 
+    Everything in CSS is a box.
+    content -> padding -> border -> margin(space around the box).
+*/
+
+/* To reset the browser default styles we do a css reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* 
+        box-sizing property decides whether the box should include paddings, border size
+        to the box size. Margins are outside of a box.
+        content-box -> the size(height, width) we set is of the content. Padding and border size will be top of it.
+        border-box -> the size is of the box itself including padding and border so the size of 
+        content reduces automatically.
+
+        size = 500 x 100
+        height = 100, width = 500, padding = .5em = 16px, font-size = 2rem = 32px
+        content-box -> content width = 500, content height = 100, padding will be top of that
+        so box size increases.
+        border-box -> content width = 500 - 16 - 16, content height = 100 - 16 - 16.
+
+        margin -> top right bottom left.(1 value or all 4 values).
+        3 values -> top right and left bottom.
+        2 values -> top and bottom right and left.
+
+        Margin collapsing -> top and bottom margin combines and takes the maximum of the two values.
+    */
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid maroon;
+    /* outline is not a part of box model */
+    outline: 5px solid maroon;
+    /* add space between border and outline */
+    outline-offset: 5px;
+    /* width: 50%; */
+    /* height: 200px; */
+    font-size: 1rem;
+    padding: .5em;
+    margin: 1em;
+}
+p{
+    border: 1px dashed black; 
+    padding: .5em;
+    margin: .5em;
+}
+
+/* 20px will be the space between thse two divs */
+.collapse1{
+    border: 1px dashed black; 
+    margin-bottom: 10px;
+}
+.collapse2{
+    border: 1px dashed black; 
+    margin-top: 20px;
+}
+
+.parentDiv{
+    /* setting border will not make the vertical margins collapse of parent and child */
+    /* border: 1px dashed purple;  */
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+.childDiv{
+    /* border: 1px dashed green;  */
+    margin: 40px;
+    height: 100px;
+    width: 100px;
+    background-color: maroon;
+}

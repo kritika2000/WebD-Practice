@@ -1,0 +1,12 @@
+.navBar{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+}
+.nav-items{
+    list-style-type: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-right: 1em;
+}

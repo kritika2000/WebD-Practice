@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<!-- cellspacing:between the cells 
+cellpadding:within a column-->
+
+<body>
+    <table border="1" cellspacing=10 cellpadding=10>
+        <tr>
+            <td>row1col1</td>
+            <td>row1col2</td>
+            <td>row1col3</td>
+            <td rowspan="2">row1col4</td>
+        </tr>
+        <tr>
+            <td>row2col1</td>
+            <td>row2col2</td>
+            <!-- col will take the space of the mentioned colspan -->
+            <td>row2col3</td>
+        </tr>
+        <tr>
+            <td>row3col1</td>
+            <td colspan="3">row3col2</td>
+        </tr>
+    </table>
+</body>
+
+</html>

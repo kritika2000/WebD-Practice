@@ -1,0 +1,14 @@
+An HOF as a type of function that takes a function as a parameter eg:- a callback.
+Eg:- map, filter.
+
+An HOC is a function that takes a component as its first argument and returns
+a new component that wraps the given component and providing extra
+capabilities to it.
+
+Syntax:-
+Eg:- const componentWithToggle = withToggle(Component);
+export default componentWithToggle
+
+It is conventional to start the name of the HOC with 'with'.
+
+

@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+}
+.header{
+    background-color: cadetblue;
+    height: 10vh;
+    display: block;
+    margin: 0;
+    color: white;
+    border: 1px solid black;
+}
+.header ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+ .header ul{
+    width: 50%;
+    height: inherit;
+    display: block;
+    margin: 0 auto;
+}
+section{
+    background-color: antiquewhite;
+    height: 70vh;
+    margin-top: -16px;
+    border: 0px solid black;
+}
+
+.main{
+    margin: 0;
+    float: left;
+    background-color: brown;
+    width: 70%;
+    /* height: 70vh; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.aside{
+   background-color: aqua;
+   height: 70vh;
+}
+
+/* .aside ul li{
+    list-style-type: none;
+    text-align: center;
+    padding:10px;
+} */
+footer{
+    /* clear: both; */
+    background-color: black;
+    color: white;
+    height: 20vh;
+    text-align: center;
+    margin:0px;padding:0px;
+    
+} 

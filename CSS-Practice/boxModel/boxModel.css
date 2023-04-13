@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+.block-box{
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  border: 1px solid black;
+  color: white;
+  /* affects height and width of the box */
+  padding: 40px;
+  /* doesn't affect height and width */
+   /* margin: 20px; */
+  box-sizing: border-box;
+  /* margin: auto; */
+}
+.inline-container{
+  font-size: 0px;
+}
+.inline-box{
+  background-color: burlywood;
+  color: white;
+  /* margin-top: 50px;
+  margin-left: 20px; */
+  font-size: 16px;
+  height: 30px;
+  width: 100px;
+  display: inline-block;
+}
+span {
+  /* margin-left: 100px; */
+  /* padding: 10px; */
+  width: 80px;
+  height: 50px;
+  background-color: lightblue;
+  border: 2px solid blue;
+  display: inline;
+}
+ 
+.parent{
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+}
+.child{
+  height: 50px;
+  width:50px;
+  background-color: rebeccapurple;
+  margin: auto;
+  /* center a div */
+  position: relative;
+  top: calc(50% - 25px);
+}
+         

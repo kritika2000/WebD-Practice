@@ -1,0 +1,15 @@
+.bga{
+    height: 800px;
+    width: 100px;
+    background-image: url("https://picsum.photos/200/300");
+    padding: 20px;
+    background-repeat: repeat;
+    overflow: scroll;
+    background-color: beige;
+    background-size: contain;
+    /* fixed -> relative to viewport and content
+       local -> move with viewport + content
+       scroll -> scroll with viewport but not content
+    */
+    background-attachment: scroll;
+}

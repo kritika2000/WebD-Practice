@@ -1,0 +1,65 @@
+An Organized collection of relevant Data.
+DBMS -> software to manage database.
+
+Types of DB -> Graph DBs, Object DBs, Document DBs(Mongo DB), Relational DB.
+
+RDBMS -> data is structured in a table format with rows and columns.
+key -> a unique column value a row which uniquely identifies rows in a table.
+
+primary key -> a key with single attribute.
+candidate key -> multiple attributes uniquely indentifies a row.
+superkey -> adding other attrbutes to the candidate key.
+surrogate key -> sort of temp key like serial number(1, 2, 3 etc.)
+composite key -> primary key consists of more than one attribute.
+
+We need to define relationships to connect one or more tables.
+
+3 types of relationships:-
+1. one-to-one -> It is used to create a relationship between two tables
+   in which a single row of the first table can only be related 
+   to one and only one records of a second table. Similarly, 
+   the row of a second table can also be related to anyone row of the first table.
+   Not used frequently. 
+2. many-to-one -> It is used to create a relationship between 
+   two tables. Any single rows of the first table can be related 
+   to one or more rows of the second tables, but the rows of second
+   tables can only relate to the only row in the first table. 
+   It is also known as a many to one relationship. eg:- one customer can like many dishes or one dish can be liked by many customers.
+3. many-to-many -> Each record of the first table can relate to any 
+   records (or no records) in the second table.
+
+Transaction -> A set of operations that must all be completed. 
+For eg:- transferring money between bank accounts. If one operation is unsuccessful then
+all operations will be reverted to their original state.
+
+Transaction must be Atomic, Consistent, Isolated, Durable.
+
+Atomic -> It means if any operation is performed on the data, 
+        either it should be performed or executed completely or should not 
+        be executed at all.
+Consistent -> In DBMS, the integrity of the data should be maintained, 
+        which means if a change in the database is made, it should remain 
+        preserved always.
+Isolated -> It means if two operations are being performed on two different 
+        databases, they may not affect the value of one another.
+Durability -> In DBMS, the term durability ensures that the data after the 
+        successful execution of the operation becomes permanent in the database.
+
+ACID requirements are handled by DBMS software.
+
+Each fields has a datatype in a DB. Eg:- String -> VARCHAR(variable length), CHAR(fixed length).
+Eg: -VARCHAR(200) can contain at max 200 characters
+Date & Times -> DATETIME.
+Numbers -> DECIMAL(3, 2) -> 123.56, INT(5).
+NULL -> to indicate if a value is missing.
+We usually use INT(6) for surrogate keys(tells the DB to autoincrement it if new row is inserted.) but for security reasons many people use UUID
+(Universally Unique Identifier) which is much longer and therefore more difficult ot guess.
+
+A table consists info about single entity and create relationships between table if needed.
+
+Referential Integrity -> DBs are aware of relationships and won't allow a user to 
+modify data in a way that violate those relationships. It helps us to 
+maintain consistency of the DB.
+Eg-> If we enter a record which has a foriegn key and that forign key doen't exixt in it's own table
+then this record will be rejected. 
+Same case in deletion.

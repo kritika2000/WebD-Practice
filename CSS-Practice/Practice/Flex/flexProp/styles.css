@@ -1,0 +1,80 @@
+.flex{
+    display: flex;
+    width: 500px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* align-items: flex-start; */
+    /* align-content: space-between; */
+    /* align-content: space-between; */
+    /* justify-content: space-between; */
+}
+.flex > *{
+    background-color: blue;
+    border: 2px solid red;
+    /* margin: 5px; */
+    color: white;
+    font-size: 2em;
+    height: 50px;
+    padding: 10px;
+    /* width: 50px; */
+    /* flex: 0 0 auto; */
+    /* flex-basis: auto; */
+    /* items won't stretch even if width property is applied until or unless
+    flex property is applied. */
+    /* width: 400px; */
+    /* flex-basis value is auto and the items don't have a width set,
+    and so are auto-sized. This means that flexbox is looking at the 
+    max-content size of the items.
+    if width is set, it will take that.
+     */
+     /* the remaining positive free space is divided equally 
+     and may have different sizes.
+      */
+      /* An initial setting of a flex container is flex-shrink: 1.*/
+    /* flex: 1 0 0; */
+    /* flex: 1 0 auto; */
+    /* flex: 0 0 auto; */
+    /* flex: 0 -> will collapse the element to its smallest 
+    possible width given the content, -> min-content */
+    flex: 0 2 200px;
+}
+.flex > *{
+  /* align-self: flex-start; */
+  /* width: 200px; */
+}
+/* .flex > :nth-child(2){
+  align-self: center;
+}
+.flex > :nth-child(3){
+  align-self: flex-end;
+} */
+div:nth-child(4){
+    /* flex-basis: 300px; */
+    /* margin-left: 100px; */
+}
+/* flex shrink factor, which determines how much 
+the flex item will shrink relative to the rest of the 
+flex items in the flex container when negative free space is distributed. */
+/* they will never become smaller than that min-content size. */
+
+/* .box {
+    display: flex;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  .box :first-child {
+    width: 100px;
+  }
+
+  .box > * {
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: pink;
+    border: 1px solid black;
+  } */

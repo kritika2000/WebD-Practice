@@ -1,0 +1,73 @@
+a{
+    /* default styles in links -> underlined, have blue color 
+    if not visited and purple if visited and a pointer cursor(little hand)
+    when the link is pointed or hovered.
+    holding and clicking the link(active state) changes the color to red.
+    */
+    /* the underline will be removed */
+    text-decoration: none;
+    /* shows a circle with a cross, pointer is by default  */
+    cursor: not-allowed;
+    /* overrides other states also */
+    color: blue;
+}
+/* 
+if the link is already visited, we often do not use different color for visited.
+*/
+a:visited{
+    color: purple
+}
+/* if the link is hovered */
+/* a:focus is to make the links accessible, the style will be applied when the links are visisted using tab */
+a:hover, a:focus{
+    /* color: dodgerblue; */
+    opacity: .8;
+}
+/* when the link is active */
+a:active{
+    color: coral;
+}
+/* a:visited{
+    color: purple
+} */
+
+/* 
+lvha should be the order as if we put hover above visited, so if the link is visited and after that if
+it is hovered, then the hover color/style will not be applied.
+*/
+
+/************** opacity **************/
+
+/* 
+    opacity applies to the element as a whole, including its contents,
+    even though the value is not inherited by child elements. 
+*/
+.parent{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    opacity: .7;
+}
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    /* now it will the fraction of opacity applied to it's parent */
+    opacity: 1;
+}
+
+/* 
+    To change the opacity of a background only, use the background property with a color value 
+    that allows for an alpha channel. For example: background: rgba(0, 0, 0, 0.4);
+    https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
+*/
+/* .parent{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 0, 255, .5);
+} */

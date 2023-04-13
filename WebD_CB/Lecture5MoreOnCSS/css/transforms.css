@@ -1,0 +1,21 @@
+div{
+    background-color: rebeccapurple;
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    padding: 10px;
+}
+/* order of transforms matters */
+.one{
+    /* grow in it's place */
+    transform: scale(1.5, 1.5);
+}
+.two{
+    transform: rotate(30deg);
+}
+.three{
+    transform: rotateZ(60deg);
+}
+.four{
+    transform: translate(20px, 100px);
+}

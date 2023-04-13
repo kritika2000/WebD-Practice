@@ -1,0 +1,30 @@
+.hero--container{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    width: 550px;
+    height: 45%;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+}
+.hero--container{
+    padding: 36px;
+}
+.grid{
+    max-width: 400px;
+    align-self: center;
+}
+.hero--title{  
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+.hero--detail{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 17px;
+    margin: 0;
+    width: 320px;
+    text-align: justify;
+}

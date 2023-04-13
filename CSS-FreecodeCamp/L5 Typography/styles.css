@@ -1,0 +1,92 @@
+/* 
+    Typography is a way text is arranged and presented.
+*/
+
+/* import font using import statement */
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Shantell+Sans:wght@300&display=swap'); */
+
+
+body{
+    /* set padding equals to x% of html element's width(parent) = viewport width */
+    padding: 10%;
+    /* 
+        font-size would be k x font-size of the root element(html)
+        This font-size will not be applied(inherited) to the form elements input and the button
+        as form elements except labe don not inherit properties from parent.
+     */
+    font-size: 1rem;
+
+}
+
+input, button{
+    /* have to make them explicitly inherit the font-size of the parent. */
+    font-size: inherit;
+}
+
+p{
+    /* 
+        text-decoration has underline, line-through, overline etc. values
+        text-decoration is none by default except for links, they're underlined by default
+        so we need to set it to none to remove the underline in a link.
+    */
+    text-decoration: line-through;
+
+    /* can transform the text to uppercase, lowercase, capitalize(capitalize first letter) */
+    text-transform: capitalize;
+
+    /* 
+        align the text to the direction(left, right, center, justify(all lines end at a same place) mentioned.
+        we can center a span inside a block element using this property.
+    */
+    text-align: left;
+
+    /* to give some identation(first line) to the text we use text-indent property */
+    text-indent: 2em;
+
+    /* give spaces between lines. This increases readability. Default is 1.2 */
+    line-height: 1.5;
+
+    /* letter spacing increases the space between letters. Not used too often, we use browser default spacing usyally. */
+    letter-spacing: .1em;
+
+    /* word spacing increases spaces between words. */
+    word-spacing: .3em;
+
+    /************ fonts ***********/
+
+    /* font-weight gives font a weight. 300 or 400 is normal */
+    font-weight: 900;
+
+    /* font style set the style -> italic, */
+    font-style: italic;
+
+    /* 
+        font-family changes how a character looks.
+        generic families -> sans-serif, serif are normally used(generally installed in most computers), monospace, cursive.
+        we use fallbacks, if the font is not available in a computer then it can use the next one. 
+
+        web-safe fonts -> already installed on computers and not be be installed from external resources(google fonts).s
+
+        we can use external fonts using import or using a link tag in html.
+    */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* 
+        You can't choose more that one font from google, as the more external fonts are used
+        the longer the page will take to load as they're downloaded from external resources.
+    */
+    font-family: 'Shantell Sans', cursive; /* an external google font cursive is a fallback here */
+}
+/* center aligned a span inside a div */
+div{
+    /* background-color: aquamarine; */
+    /* text-align: center; */
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text#what_is_overflowing_text */
+/* https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/#:~:text=The%20fit%2Dcontent%20keyword%20value&text=When%20given%20infinite%20available%20space%2C%20the%20max%2Dcontent%20defines%20the,the%20box%20uses%20min%2Dcontent%20. */
+div.textContainer{
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 250px;
+    overflow-wrap: break-word;
+    /* word-break: break-all; */
+}

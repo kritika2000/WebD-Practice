@@ -1,0 +1,73 @@
+/* 
+    there are two types of elements:- block level and inline elements.
+    
+    block elements(div, p, h(1-6) etc):- take up the whole width of it's parent
+    and starts on a new line. They respect margins and padding on all sides.
+    Margin would cause othe relements to move away.
+
+    inline elements(button, img, a span etc):- 
+    do not take the whole width
+    but take as much they need.
+    do not cause a line break.
+    height and width is not applied.
+    horizontal margin and padding is applied cause the elements to move away.
+    vertical margins and paddings are applied but do not the element to move away.
+    In vertical paddings the element overlaps.
+
+    display: none -> cause the element to remove from the DOM.
+*/
+
+p{
+    background-color: antiquewhite;
+    /* margin: 20px; */
+    padding: 10px;
+}
+
+main{
+    /* p would take the 100% of it's parent element */
+    /* background-color: brown; */
+    width: 100%;
+}
+
+span{
+    /* 
+        display property is inline for span.
+        It still doesn't break on a new line but 
+        all margins, paddings, height and width are applied like block.
+    */
+    display: inline-block;
+    background-color: gray;
+    /* margin: 10px; */
+    padding: 20px 25px;
+    width: 100px;
+}
+
+/* 
+    inline/inline-block elements have small spacing between them,
+    to remove that we can either make the parent element of the element
+    which is inline/inline-block flex or set the parent element's font size to 0
+    and then set the proper font size of the element.
+*/
+
+nav{
+    background-color: #333;
+}
+
+ul{
+    list-style: none;
+    font-size: 0;
+    text-align: right;
+}
+ul li{
+    display: inline-block;
+    /* background-color: #333; */
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+li a{
+    color: whitesmoke;
+}
+
+.lorem{
+    background-color: antiquewhite;
+}

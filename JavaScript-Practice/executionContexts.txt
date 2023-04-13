@@ -1,0 +1,32 @@
+Execution Contexts:-
+https://www.freecodecamp.org/news/execution-context-how-javascript-works-behind-the-scenes/#:~:text=The%20Execution%20Context%20contains%20the,and%20the%20code%20gets%20executed.
+
+Arrow Functions:-
+https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
+
+Scopes & Closures:-
+https://www.freecodecamp.org/news/scope-and-closures-in-javascript/
+
+'this' Binding:-
+https://www.freecodecamp.org/news/javascript-this-keyword-binding-rules/
+
+Arrow Functions and 'this':-
+https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
+
+Binding Event Handlers in React:-
+https://www.freecodecamp.org/news/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb/
+
+Lexical Scope:-
+https://www.freecodecamp.org/news/javascript-lexical-scope-tutorial/
+
+When to use Arrow Functions:-
+https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
+
+JS Prototype:-
+https://www.freecodecamp.org/news/a-beginners-guide-to-javascripts-prototype/
+
+Var vs let:-
+https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript
+
+Hoisting:-
+https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript#undefined-vs-referenceerror

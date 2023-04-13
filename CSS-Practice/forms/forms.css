@@ -1,0 +1,61 @@
+body{
+     margin: 0;
+     background-image: url("/resources/photo-1579393329936-4bc9bc673651.jpeg");
+}
+/* ----------- Heading -------------- */
+h1{
+    background-color: forestgreen;
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+    padding: 10px 0;
+}
+/* ----------- Name -------------- */
+form{
+    margin: 20px;
+}
+
+#fullName{
+    margin-top: 10px;
+}
+form > label:not(#dob label){
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+select{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    height: 35px;
+    width: 200px;
+}
+#fullName input{
+  height: 35px;
+  width: 200px;
+}
+
+#course input:nth-child(n + 3){
+    margin-left: 20px;
+}
+#course, #dob, #gender :is(input, label):first-of-type{
+    margin-top: 10px;
+}
+#dob{
+    height: 30px;
+    width: 150px;
+}
+
+button{
+    height: 45px;
+    width: 150px;
+    margin-bottom: 20px;
+    background-color: forestgreen;
+    color: white;
+    border-radius: 20px 0;
+    border: 2px solid white;
+}
+#submit{
+    text-align: center;
+}
+

@@ -1,0 +1,75 @@
+body { 
+    margin: 0;   /* Remove body margins */
+}
+/* .wrapper {
+    font-size: 1em;
+  }
+  
+.px {
+    width: 200px;
+    border: 1px solid black;
+}
+  
+.vw {
+    width: 10vw;
+    border: 1px solid black;
+}
+  
+.em {
+    width: 10em;
+    border: 1px solid black;
+} */
+body{
+    background-color: azure;
+}
+html{
+    font-size: 20px;
+}
+div{
+    font-size: 2rem;
+}
+li{
+    font-weight: 80%;
+    opacity: 0.5;
+}
+.container{
+    height: 500px;
+    width: 500px;
+    border: 3px solid blue;
+   
+}
+.image{
+    /* background-image: linear-gradient(90deg, rgba(119,0,255,1), rgba(0,212,255,1)); */
+    background-image: url("https://picsum.photos/200/300"), url("https://picsum.photos/200/300");
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 500px;
+    width: 500px;
+}
+.container p{
+    background-color: bisque;
+    margin: 0;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.div1{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    padding: 1px;
+}
+.div3{
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+    margin: 75px;
+}  
+.div2{
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    margin: 50px;
+    padding: 1px;
+}

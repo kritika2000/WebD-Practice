@@ -1,0 +1,27 @@
+.btn{
+    height: 50px;
+    width: 120px;
+    padding: 20px;
+    background-color: peru;
+    text-align: center;
+    margin: 50px;
+    border-radius: 10px;
+/* bax shadow in x y direction(can be -ve), z is to blur the shadow */
+    box-shadow: cornflowerblue  10px 10px 10px;
+    
+}
+.btn:hover{
+    /* transform: scale(1.1, 1.1); */
+    transform: translate(-10px, -10px);
+    /* all changes(css) will take place in 2s */
+    transition: 0.5s; 
+    /* transform: translate(10px, 10px);  */
+    /* redefining shadow which will give an illusion that the button 
+    is moving away from the shadow */
+    box-shadow: cornflowerblue 20px 20px 10px;
+}
+.btn:active{
+    transition: transform 0.2s box-shadow 1s; 
+    transform: translate(5px, -5px);
+    box-shadow: cornflowerblue 5px 5px 5px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Images</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hello World!</h1>
+
+      <nav aria-label="primary-navigation">
+        <ul>
+          <li><a href="#html">HTML</a></li>
+          <li><a href="#address">Address</a></li>
+          <li><a href="#schedule">Daily Schedule.</a></li>
+
+          <li><a href="html5.png" download>Download HTML5 logo</a></li>
+
+          <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="html">
+        <h2>I'm ready to learn Web Dev</h2>
+        <p>This is my first web page.</p>
+        <img
+          src="html_logo.png"
+          alt="HTML5 logo"
+          title="This is HTML5 Logo"
+          width="200px"
+          height="200px"
+        />
+
+        <h3 id="schedule">My Daily Schedule</h3>
+        <p>Let me tell you how:</p>
+
+        <ul>
+          <li>...I learn more about web dev</li>
+          <li>...I plan out my schedule</li>
+          <li>
+            ...I use resources from
+            <abbr title="Mozilla Developer Network">MDN</abbr>
+          </li>
+        </ul>
+      </article>
+
+      <hr />
+      <article id="address">
+        <h2>I'm planning a vacation</h2>
+        <section>
+          <h3>I've heard good things about Carribean.</h3>
+          <figure>
+            <img
+              src="caribbean.jpeg"
+              alt="Carribean Beach"
+              width="400"
+              height="225"
+              loading="lazy"
+            />
+            <figcaption>Carribean Beach Gateway</figcaption>
+          </figure>
+          <figure>
+            <figcaption>Carribean Beach Picture</figcaption>
+            <p>
+              <code>&lt;h4&gt;Hello World&lt;h4&gt;</code>
+            </p>
+          </figure>
+          <aside>
+            <!-- details and summary work together. -->
+            <details>
+              <summary>Guess the number of hours I code?</summary>
+              <p>I start at 8am and write code for 3 hours.</p>
+            </details>
+          </aside>
+        </section>
+        <section>
+          <h3>Address</h3>
+          <ul>
+            <li>
+              <p>I've heard good things about going here:</p>
+              <address>
+                FCA 627 'A'
+                <br />SGM Nagar <br />Faridabad 121001
+              </address>
+              <figure>
+                <img
+                  src="vacation.jpeg"
+                  alt="Vacation Image"
+                  width="400"
+                  height="225"
+                  loading="lazy"
+                />
+                <figcaption>Vacation Image</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="#">Back To Top</a>
+      <a href="/">Go to Root page</a>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+    Semantic tags give a meaning to the element. It is useful for assistive technology.
+    and is advisable to use.
+    like instead of using div and giving it a bigger font-size we should
+    use heading tags. 
+    We usually divide out pahe content int header, main content and footer section.
+    Inside main then we can have multiple sections.
+    We usually put nav bars inside headers.
+    Visually we may not see any difference but it just gives a meaning to the 
+    content portion wrapped inside semantic tags.
+    <nav> reperesents that the content is a navigation bar.
+    There can only be one main element per page nut there can be multiple headers 
+    and footers otherwise W3 consortium will throw errors.
+    If added multiple main elements, other main elements include hidden attributs.
+    Or only one or zero main elements should not contain hidden attribute.
+    If we have multiple nav bars in the page we must give them an aria-label
+    to differentiate them for assistive technology.
+ -->
+<!-- 
+    Semantic tags:- 
+    nav, h1-h6, nav, list tags, header, footer, main, section, aside.
+    article-> when the content seems like an artice i.e having a title and body
+    otherwise we can use section tag to create a section in the page.
+    We can add sections inside an article.
+    aside-> we use aside to represent an unimportant part of the page.
+ -->
+
+<!-- 
+    Avoid using divs(block element) and spans(inline element) as they don't give any semantic meaning. 
+    Use them if semantic elements is not a correct choice.
+    We use them to apply some styling may be to a div container.
+-->
+
+<!-- 
+  Avoid using px with height and width. Instead of using 300px just write 300.
+  Do not add slash '/' for void elements. Eg: Use <img> instead of <img/>.
+ -->

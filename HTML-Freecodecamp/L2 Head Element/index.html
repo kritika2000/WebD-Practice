@@ -1,0 +1,72 @@
+<!-- https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/ -->
+<!-- Doctype must be added on the top of a webpage.
+It is an "information" to the browser about what document
+type to expect.
+ -->
+<!DOCTYPE html>
+
+<!-- lang attribute defines the language og the webpage and must be added
+otherwise it'll throw a warning when the webpage is uploaded to W3C website
+ -->
+<html lang="en">
+  <!-- head area contains the meta data about the web page
+    It is where we link our external resources(pulled from the web)
+    like stylesheets, javascript files.
+ -->
+  <head>
+    <title>HTML by Dave Gray</title>
+
+    <!-- 
+        Character encoding is a method of converting bytes into 
+        characters. To validate or display an HTML document properly.
+        i.e. it tells the browser how to interpret raw zeroes and ones into real characters.
+        charset(UTF-8 is standard for all webpages as it covers almost all characters 
+        and symbols in the world) must be added.
+        Can use the below also to define charset.
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        http-equiv Attribute is used to provide header information or 
+        value of the content Attribute.
+     -->
+    <meta charset="UTF-8" />
+    <!-- refresh after every 10 secs -->
+    <!-- <meta http-equiv="refresh" content="10" ; /> -->
+    <!-- content attribute contains the value for the http-equiv or name attribute, 
+    depending on which is used. -->
+    <meta name="author" content="Kritika" />
+    <!-- tells the browser that Kritika is the author here -->
+    <name
+      name="'description"
+      content="This page contains all the things I'm learning about HTML"
+    />
+
+    <!-- 
+        link attribute specifies relationship between the current document and the
+        external resource.
+        This element is most commonly used to link to stylesheets, google fonts, but is also used 
+        to establish site icons (both "favicon" style icons and icons for the home screen.
+
+        The rel attribute defines the relationship between a linked resource 
+        and the current document. There are different types of relationshps eg:- stylesheet, icon etc.
+
+        href defines the link to the resource.
+    -->
+    <link rel="icon" href="html5.png" type="image/png" />
+    <!-- The type attribute specifies the media type of the linked document/resource.
+        For stylesheets browser automatically assumes that media type is text/css.
+     -->
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <!-- <style>
+      html {
+        font-size: 22px;
+      }
+    </style> -->
+  </head>
+  <!-- body is what users see on the page. -->
+  <body>
+    <!-- Biggest heading in the page and should only be one per page. -->
+    <h1>H1 Heading</h1>
+    <p>This is a paragraph</p>
+  </body>
+</html>
+
+<!-- About meta tags:- https://rajeshdhiman.medium.com/html-meta-tags-everything-a-front-end-developer-should-know-c5305dbab0d8 -->

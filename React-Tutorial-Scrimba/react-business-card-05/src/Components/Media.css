@@ -1,0 +1,16 @@
+.media--nav{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161619;
+    margin-top: 20px;
+}
+.media--links{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-inline-start: 0px;
+    width: 100%;
+    margin: 0 30px;
+}

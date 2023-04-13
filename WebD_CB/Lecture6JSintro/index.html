@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Intro</title>
+    <!-- to add javascript code in html itself using script tag -->
+    <!-- can be added in both body and head tag(head script will run first) -->
+    <script>
+        console.log('Hello in head!')
+        // alert('Hey There');
+    </script>
+    <!-- only defer: script has downloaded in parallel to parsing the page
+    but executed after the page has finished parsing -->
+    <!-- defer and async: script is downloaded in parallel to parsing the page, 
+    and executed as soon as it is available(async > defer) -->
+    <!-- neither async nor defer: the script is downloaded and executed, blocking 
+    the parsing until the script is completed -->
+    <!-- alternative option to put all the script tags
+         before the end of the body tag -->
+    <script async defer src="./script.js">
+    //body of script  is not evaluated
+    </script>
+</head>
+
+<body>
+    <h1>JS Inro</h1>
+    <p>This is paragraph</p>
+    <script type="text/javascript">
+        console.log('Hello in body!')
+    </script>
+</body>
+
+</html>

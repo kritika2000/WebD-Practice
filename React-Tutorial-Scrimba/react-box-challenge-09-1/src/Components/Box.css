@@ -1,0 +1,13 @@
+.box--container{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+.box{
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+}
+.color{
+    background-color: aquamarine;
+}

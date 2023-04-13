@@ -1,0 +1,26 @@
+React Router is not officially a part of React.
+
+It is considered a defect away to make single page applications in react.
+Used to build multipage sites.
+
+In multipage applications, the request goes to the server for every page
+to render on the browser. The entire app is reloaded for the smallest change.
+
+In SPAs with React, initially, the request goes to the server to load the entire app and if the user interacts with the app, the new data/view is shown via conditional rendering while keeping other components/content intact.
+
+React Router:-
+
+1. Conditionally renders large parts of our page.
+2. It has a Declarative API i.e. we're given some hooks/components to
+   handle switching things that we see on the page.
+3. It comes with hooks and some components.
+
+Primary Components:-
+
+Routers - Browser, Hast Routers.
+Route Matchers - Route, Switch.
+Navigation - Link, NavLink, Redirect.
+
+Hooks - useHistory, useLocation, useParam.
+
+https://blog.webdevsimplified.com/2022-07/react-router/

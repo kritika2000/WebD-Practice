@@ -1,0 +1,36 @@
+.main--container{
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    grid-column: span 2;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
+}
+.main--container img{
+    max-width: 100%;
+    grid-column: span 3;
+}
+.main--container h1{
+    margin-top: 0;
+}
+.info{
+    grid-column: span 2;
+    padding: 0 0 1.5em 3em;
+}
+.info p{
+    font-size: .9em;
+    color: hsl(236, 13%, 42%);
+    margin-top: 0;
+}
+.info button{
+    height: 2.8em;
+    width: 11.5em;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    font-weight: bold;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .2em;
+}

@@ -1,0 +1,15 @@
+The controlled component is a way that you 
+can handle the form input value using the state and 
+to change the input value there is only one way to change 
+it is using setState or useState if you are using React Hooks
+and you can change this state using one of the events like onChange
+and when the user starts writing any character setState or useState 
+will be called and update the state of this input then it will add 
+the new value inside the input.
+
+The uncontrolled component is like traditional HTML 
+form inputs that you will not be able to handle the value
+by yourself but the DOM will take care of handling the 
+value of the input and save it then you can get this value 
+using React Ref and for example, print it inside alert when
+submitting or play with this value as you want.

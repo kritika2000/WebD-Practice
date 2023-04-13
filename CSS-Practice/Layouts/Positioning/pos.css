@@ -1,0 +1,105 @@
+/* Positioning allows you to take elements out of normal document flow  */
+.static {
+    /* Static positioning is the default that every element gets.
+     It just means "put the element into its normal position 
+     in the document flow — nothing special to see here."
+ */
+    position: static;
+    background: yellow;
+    border: 2px solid black;
+}
+
+.relative{
+    /* 
+    An absolutely positioned element no longer exists 
+    in the normal document flow. Instead, it sits on its 
+    own layer separate from everything else. This is very 
+    useful: it means that we can create isolated UI features
+     that don't interfere with the layout of other elements
+      on the page. For example, popup information boxes, 
+      control menus, rollover panels, UI features that
+       can be dragged and dropped anywhere on the page, and so on.
+
+       This means it will be positioned relative to the nearest positioned
+       ancestor(with position value other than static */
+    /* position: absolute; */
+    /* that it's relative to its original 
+    position within the parent element(body if no container element).
+    They also do not affect the layout of the surrounding elements. */
+    position: relative;
+    background-color: lightblue;
+    border: 2px solid black;
+    /* top -> move the element down, left -> to right
+    right -> to left, bottom -> moves up .. must be set to see the difference */
+    /* for absolute it will cover the first paragraph */
+    top: 30px; bottom: 0; left: 60px; right: 0;
+    width: 50%;
+    height: fit-content;
+    z-index: -1;
+}
+
+.container{
+    width: 50%;
+    height: 300px;
+    border: 1px solid gray;
+}
+.absoluteContainer{
+    width: 50%;
+    height: 200px;
+    border: 1px solid gray;
+    position: relative;
+    top: 30px;
+}
+.absoluteContainer div{
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    overflow: scroll;
+    background-color: pink;
+    height: 200px;
+}
+.absoluteContainer div h1{
+   position: fixed;
+   background-color: aqua;
+   margin: 0;
+}
+
+/* z-index is used to change the stack order of positioned elements */
+/* Fixed positioning works in exactly the same way as 
+absolute positioning, with one key difference: whereas 
+absolute positioning fixes an element in place relative 
+to its nearest positioned ancestor (the initial containing 
+block if there isn't one), fixed positioning usually 
+fixes an element in place relative to the visible portion 
+of the viewport.  */
+
+body {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+.positioned {
+    position: relative;
+    background: yellow;
+    top: 0px;
+    left: 0px;
+}
+p:nth-of-type(1) {
+    position: absolute;
+    background: lime;
+    top: 60px;
+    right: 50px;
+    z-index: 1;
+}

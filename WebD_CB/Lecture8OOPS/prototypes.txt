@@ -1,0 +1,16 @@
+Prototypes are the mechanism by which JavaScript objects 
+inherit features from one another.
+
+__proto__ is a hidden variable(in every object) which 
+points to the object from 
+which the current object has inherited. or it points to 
+the blue print from which it was created.
+
+Prototypes are the blue print from which we create things.
+String.Prototype(default blue print exists in JavaScript) is a template 
+or blue print from which a string(str) is made
+
+Classes in JavaScript still works the way Prototype does.
+
+whenever we create an object of a class, the object will inherit 
+from the classname.Prototype and the class will inherit from Object.Prototype

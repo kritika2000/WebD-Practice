@@ -1,0 +1,22 @@
+Webpack is a build tool that allows us to take all of our 
+assets and turn them into a production ready bundle. 
+All of our files are considered modules and we tell Webpack 
+to load those modules when we configure our project.
+
+ So why would we use something like Webpack? Well the 
+ answer to that starts by looking back at how loading assets 
+ used to work in web projects. Consider this HTML file. We're 
+ adding tons of script tags here in the head, three of them, 
+ and when we used to add script tags like this, it could get 
+ pretty messy. Errors could occur from the hierarchy of these scripts.
+
+  So some of the benefits of working with something like Webpack, 
+  is that it provides an alternative to some of these complications,
+   with a concept of a dependency graph. We're going to require 
+   assets like images, CSS files, and Java script files and their 
+   loaded when they're needed for the page. We can also split our 
+   app into different files and just load the code that the page 
+   requires. Then when the user goes to a new page, they don't 
+   download the already downloaded code again. It also minimizes 
+   the initial loading time for the app. This process is called 
+   code splitting.

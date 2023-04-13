@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+        Internal styles do not really take precedence.
+        For browser there is not difference btw external and internal. 
+        styles it's just because the order(cascade) that internal styles
+        are getting applied as they're written after the external styles.
+        Browser consider styles with style tag just an another style sheet.
+
+         <style>
+            p {
+                color: green;
+            }
+        </style> 
+    -->
+    <link rel="stylesheet" href="selectors.css" />
+  </head>
+  <body>
+    <!-- 
+        We should avoid inline styles.
+        Inline styles take precedence over extrenal and internal styles because
+        it is applied directly to the element.
+        But we want separation of concerns, so the best way is to use external stylesheet
+        as it sperated from our HTML file.
+        Internal style is not a good way as it is difficult to manage them when styles too much.
+
+            <p style="color: blueviolet">I'm learning CSS</p>
+    -->
+    <h1>CSS Selectors</h1>
+    <main>
+      <article>
+        <h2>Article 1</h2>
+        <p>
+          <span class="highlight">Lorem ipsum</span>, dolor sit amet consectetur
+          adipisicing elit. Vitae eius quos numquam neque facilis expedita?
+          Impedit, itaque. Iste iusto aliquid explicabo porro, ea placeat
+          accusamus doloremque est maiores ut! Voluptate.
+        </p>
+        <h2>Article 2</h2>
+        <!-- We can give two elements a same class but IDs must be unique. -->
+        <p class="gray" id="second">
+          <span class="highlight">Lorem ipsum</span>, dolor sit amet consectetur
+          adipisicing elit. Vitae eius quos numquam neque facilis expedita?
+          Impedit, itaque. Iste iusto aliquid explicabo porro, ea placeat
+          accusamus doloremque est maiores ut! Voluptate.
+        </p>
+        <h2>Article 2</h2>
+        <p class="gray">
+          <span class="highlight">Lorem ipsum</span>, dolor sit amet consectetur
+          adipisicing elit. Vitae eius quos numquam neque facilis expedita?
+          Impedit, itaque. Iste iusto aliquid explicabo porro, ea placeat
+          accusamus doloremque est maiores ut! Voluptate.
+        </p>
+        <p class="para">
+          <span class="hello">Hello World</span>
+        </p>
+      </article>
+
+      <form>
+        <button>Submit</button>
+      </form>
+      <div>
+        <p class="divChild para">Lorem Ipsum</p>
+      </div>
+    </main>
+  </body>
+</html>

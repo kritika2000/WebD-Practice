@@ -1,0 +1,75 @@
+/* The elmenent on which the float property is applied is taken out of the
+normal flow and floats around other elements */
+
+/* While we can add a margin to the float to push the text away,
+we can't add a margin to the text to move it away from the float.
+This is because a floated element is taken out of normal flow 
+and the boxes of the following items actually run behind the float. 
+*/
+
+.box {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* font-size/line-height */
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+p{
+      text-align: justify;
+      hyphens: auto;
+}
+.p1{
+      background-color: aqua;
+      /* set margin only on the element which is being floated around */
+      /* margin-left: 20px; */
+}
+.p2{
+    background-color: lightpink;
+    /* If we want to stop the following element from moving up, 
+    we need to clear it; this is achieved with the clear property. */
+    /* none, left, right, both */
+    clear: left;
+}
+.p3{
+      /* will automatically pushed down when clear is applied to the para
+      above it */
+      background-color: lightgreen;
+      margin-left: calc(150px + 2em);
+}
+.clearDiv{
+    border: 1px solid gray;
+}
+/* since this div is taken out of the normal flow, 
+and it's height is greater than the paragraph below it, so it 
+will overflow from the container div */
+.clearDiv div{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    float: left;
+}
+/* clearfix hack to deal with the problem above */
+.clearDiv::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/* setting overflow to the container div */
+/* .clearDiv{
+    overflow: auto;
+} */
+
+/* setting display to flow-root -> modern approach */
+.clearDiv{
+    /* display: flow-root; */
+}

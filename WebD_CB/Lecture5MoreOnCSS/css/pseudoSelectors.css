@@ -1,0 +1,19 @@
+.box{
+    background-color: aquamarine;
+    color: blueviolet;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+}
+.box:hover{
+    background-color:cyan;
+}
+/* when the element is clicked(mouse is on the element) */
+.box:active{
+    height: 70px;
+    width: 100px;
+}
+/* when keyboard is on the element */
+input:focus{
+    font-size: 100px;
+}

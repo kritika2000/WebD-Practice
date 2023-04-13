@@ -1,0 +1,85 @@
+/* 
+A pseudo class such as :before has a default display CSS 
+property value of inline.
+
+Elements that are display: inline; and position: relative; are 
+not "block-level" elements by default, and if they have no content,
+ they do not take up any width. Thus, if you do not declare display: block; 
+ and you have an empty content declaration like content: "";, 
+ it will not take up any width at all in Scenario 1.
+
+Elements that are position: absolute; 
+are taken out of flow and are "block-level" 
+elements with a default display CSS property value of block.
+Because of this, Scenario 2 renders the :before pseudo element, 
+honoring its width and height declarations. 
+*/
+
+.container{
+  height: 500px;
+  width: 500px;
+  background-color: bisque;
+  /* overflow: hidden; */
+  position: relative;
+}
+.container::before{
+  content: '';
+  height: 300px;
+  width: 300px;
+  background-image:  url('/resources/images-500x250.jpeg');
+  opacity: 0.5;
+  position: absolute;
+  /* need to mention it explicitly for relative positioning */
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background-color: blueviolet; */
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.relative{
+  border: 2px solid black;
+  position: relative;
+}
+
+.box1{
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+}
+.box2{
+  height: 100px;
+  width: 100px;
+  background-color: rebeccapurple;
+  /* will move relative to it's original position,
+  surrounding elements will not have an effect,
+  still part of normal flow like static.
+   */
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+button{
+  position: relative;
+}
+.box3{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  /* Since it is removed from the normal flow of the document,
+  elements that occur after an absolutely positioned element
+  will take up it’s original position in the markup. */
+  /* absolutely positioned elements (and fixed elements )
+  lose their dimensions when they are taken out of the normal 
+  flow of the document. Width and height have to be explicitly set */
+  /* If you do not specify the top offset property, 
+  the starting point will be relative to its original
+  position in the document. */
+  /* positioned within it's nearest positioned ancestor */
+  position: absolute;
+  top: 0; 
+  right: 0;
+}

@@ -1,0 +1,8 @@
+1.Higher Order Component.
+2.React.memo() was created for functional components for PureComponent 
+like functionalityies in class components.
+3.It only compares prevProps and nextProps but not state.
+4.You can optionally implement your own checking function, 
+to determine if it should use memoized result.
+5. The function is kind of like shouldComponentUpdate(), 
+except it should return 'true' if props are found equal else false.

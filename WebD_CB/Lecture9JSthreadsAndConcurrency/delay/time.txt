@@ -1,0 +1,6 @@
+Apart from interpreter for js code a internal mechanism for 
+calculating time also exists in java which doesn't holds the interpreter.
+
+Using setTimeout browser hypothetically sets a reminder for 
+the time mentioned and executes the code inside the first parameter(function)
+meanwhile interpreter run other instructions of the js code.

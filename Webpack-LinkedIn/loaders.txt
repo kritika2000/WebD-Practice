@@ -1,0 +1,29 @@
+Webpack loaders can perform transformation on files.
+help load files and images.
+For eg:- many react apps use JSX to create components
+which can't be understood by the browser so it needs to 
+be first converted to plain JS
+
+Babel is the most common tool for this transformation.
+
+When we use webpack we tell webpack to use babel to perform
+these transformation on certail type of files.
+
+Set up babel-loader:-
+
+1. npm install babel-loader @babel/core --save-dev
+  --babel loader is the loader and babel core is the 
+  --actual package that handle transformations.
+2. Add the below code to webpack.config.JS
+  --module: {
+    rules: [
+      {
+        test: /\.js$/, -> whenever a js file is found babel should transpile it.
+        exclude: /(node_modules)/, -> don't run babel on node_modules.
+        use: {
+          loader: "babel-loader", -> use babel loader.
+        },
+      },
+    ],
+  },
+3. To actually transform the code we need a preset(babel/preset-env).

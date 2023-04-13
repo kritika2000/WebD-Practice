@@ -1,0 +1,56 @@
+/*
+    Understanding how float works:- https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats
+*/
+
+.block{
+    width: 20vw;
+    height: 20vw;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+.left{
+    float: left;
+    margin-right: 1rem;
+}
+
+.right{
+    float: right;
+    margin-left: 1rem;
+}
+
+.clear{
+    /* to make the element not wrap around the floated element.
+    the elements below it, will also not wrap. */
+    clear: left;
+}
+
+/* 
+    if we wrap the floated element and another block element inside a container,
+    and if the block size is lesser than the floated element the float element will overflow
+    to resolve this we have different ways:-
+    1.set overflow to auto(legacy method)
+    2. display to flow-root(recommended)
+*/
+
+section{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 1rem;
+    /* overflow: auto; */
+    display: flow-root;
+}
+
+p{
+    /* background-color: blanchedalmond; */
+    /* 
+        we should apply margin to the element which is floated
+        as the floated element is the one that is taken out of the normal flow
+        and it is like the other elements are placed first and the floated element
+        is place on the top of it.
+        So, margin on p will not take it away from the floated element but it's parent only.
+    */
+    /* margin-left: 20px; */
+}

@@ -1,0 +1,13 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* transition: width 2s, height 2s, background-color 4s; */
+    position: absolute;
+    left: 10px;
+    transition: all 10s linear;
+} 
+div:hover {
+    background-color: aqua;
+    left: 500px;
+}

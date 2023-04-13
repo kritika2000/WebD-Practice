@@ -1,0 +1,19 @@
+To use ocm rest apis in your vbcs app first you need to download the oracle sdk.
+
+Adding oracle sdk using define:
+define function takes two parameters first a list of dependencies(oracle sdk in our case) the module depends on and 
+second is a function which takes the object(OracleCEUI), as parameter, returned by the sdk module once it gets loaded.
+For eg:
+
+In your module, you can use OracleCEUI properties(like ssoInit, oceUrl etc).
+
+OCM Rest Apis example:
+
+1. Get home folder contents
+2.Get a folder with specific folder id or guid.
+3.Create a sub folder in a specific folder
+4.upload a file to a folder.
+
+
+
+

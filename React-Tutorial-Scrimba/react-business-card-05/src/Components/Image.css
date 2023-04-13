@@ -1,0 +1,25 @@
+.info--container{
+   margin-top: 21px;
+}
+.info--container > *{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+.info--name{
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+.info--title{
+    font-weight: 400;
+    font-size: 13px;
+    color: #F3BF99;
+    line-height: 20px;
+}
+.info--link{
+    font-weight: 400;
+    font-size: 11px;
+    color: #F5F5F5;
+    line-height: 30px;
+}

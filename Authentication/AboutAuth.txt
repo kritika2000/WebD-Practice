@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/3514750/how-browser-relates-the-cookies-for-web-sites-in-each-tab#:~:text=Cookies%20have%20nothing%20to%20do,sent%20in%20the%20request%20header.

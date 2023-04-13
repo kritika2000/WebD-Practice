@@ -1,0 +1,78 @@
+/* .wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    grid-auto-rows: 100px;
+    grid-template-areas:
+      "a a a a b b b b"
+      "a a a a b b b b"
+      "c c c c d d d d"
+      "c c c c d d d d"; */
+    /* once you set align-items: start, the height of each child <div>
+    will be determined by the contents of the <div>. 
+    This is in contrast to omitting align-items completely, 
+    in which case the height of each <div> stretches to fill its grid area. */
+    /* align-items: start; */
+    /* background-color: lightblue;
+  } */
+  /* .wrapper div{
+    background-color: rgb(233, 171, 58);
+    border: 1px solid rgb(177, 117, 5);
+  }
+  .item1 {
+    grid-area: a;
+    align-self: center;
+  }
+  .item2 {
+    grid-area: b;
+    align-self: baseline;
+  }
+  .item3 {
+    grid-area: c;
+    align-self: start;
+  }
+  .item4 {
+    grid-area: d;
+    align-self: end;
+  } */
+
+  * {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  height: 500px;
+  width: 500px;
+  gap: 10px;
+  grid-template-areas:
+    "a a b"
+    "a a b"
+    "c d d";
+    align-content: space-between;
+}
+.item1 {
+  grid-area: a;
+}
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+}

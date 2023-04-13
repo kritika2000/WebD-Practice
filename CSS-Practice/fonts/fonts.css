@@ -1,0 +1,103 @@
+/*
+
+A web font is any font used in a website’s 
+design that isn’t installed by default on the 
+end user’s device—a counterpart to a system font.
+
+It is always a good idea to provide font stack(multiple fonts) to the
+browser and add a generic font at the end of it.
+
+ */
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+html{
+    font-size: 25px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+  
+.para{
+    font-family:sans-serif;
+}
+
+h1{
+    /* set different pixels(x, y) to see both the shadows */
+    text-shadow: 2px 2px red,
+    3px 3px yellow;
+}
+p{
+    /* color: brown; */
+    /* Text decorations are drawn across descendant text elements.
+     This means that if an element specifies 
+    a text decoration, then a child element can't remove the decoration. */
+    /* text-decoration: overline; */
+    font-style: oblique;
+
+}
+em{
+    /* override the text-decoration of the parent element */
+    text-decoration: underline blue 3px;
+    /* text-decoration: none would not remove the decoration 
+    applied in the parent elememt */
+    font-size: 1em;
+    /* only captitalize first letter of words */
+    text-transform: capitalize;
+    /* offset-x, offset-y, blur-radius, color -> We can put color at the beginning */
+    text-shadow: -5px 5px 1px purple;
+}
+strong{
+    text-decoration: line-through;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.layout{
+    width: 130px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: aqua;
+    /* overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; */
+}
+/* The line-height CSS property sets the height of a line box. 
+It's commonly used to set the distance between lines of text.  */
+.layout p{
+    
+    /* justify ->  Makes the text spread out, varying 
+    the gaps in between the words so that all 
+    lines of text are the same width. Use "hyphens" with this property
+    to break some of the longer words across lines. */
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    hyphens: auto;
+    /* line-height: 1; */
+    /* % values Relative to the font size of the element itself.  */
+    /* 1.5 - 2 are recommended */
+    line-height: 200%;
+    /* letter-spacing: 2px; */
+    /* Specifies extra spacing in addition to the 
+    intrinsic inter-word spacing defined by the font. */
+    /* word-spacing: 5px; */
+    /* space left at the beginning of the first line */
+    /* text-indent: 20px; */
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+
+}
+.ws{
+    width: 500px;
+    font-size: 18px;
+    border: 1px solid red;
+    white-space: normal;
+    /* more general for langs other than CJK, same as overflow-wrap 
+    (but some browsers supports one of them only).
+    */
+    word-wrap: break-word;
+    hyphens: auto;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+}

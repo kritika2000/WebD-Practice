@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Daily Schedule
+      </caption>
+      <thead>
+        <!-- Semantic tag for table header. -->
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Semantic tag for table body. -->
+        <tr>
+          <td>
+            <time datetime="8:00">8am</time>-<time datetime="11:00">11am</time>
+          </td>
+          <td>Write Code</td>
+        </tr>
+        <tr>
+          <td>
+            <time datetime="11:00">8am</time>-<time datetime="12:00">11am</time>
+          </td>
+          <td>Eat Lunch</td>
+        </tr>
+        <tr>
+          <td>
+            <time datetime="12:00">8am</time>-<time datetime="2:00">11am</time>
+          </td>
+          <td>Study for other courses</td>
+        </tr>
+        <tr>
+          <td rowspan="2">All Other Times</td>
+          <td>Free Time</td>
+        </tr>
+        <tr>
+          <td>Sleep</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="2">
+          And that's what I do everyday 5 days a week. Just eat, sleep, code
+          ..and recharge!
+        </td>
+      </tfoot>
+    </table>
+  </body>
+</html>
+
+<!-- 
+    We use tables to structure content in rows and columns.
+    Should not use tables for entire page layout.
+    table doesn't expand to the full width of the page. 
+
+    Span rows, and columns using rowspan, colspan properties in a <td>.
+    We can give caption to the table. This is helpful for screen readers.
+-->

@@ -1,0 +1,7 @@
+1. Lifecycle method on class components.
+2. It's purpose is to allow you to determine if a component should
+update(re-render) or not.
+3. Receives the upcoming props and state as parameters so you can compare them
+against current props and state.
+4. return true -> rerender false -> no rerender required.
+5. Don't do deep equality check in here.

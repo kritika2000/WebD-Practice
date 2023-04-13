@@ -1,0 +1,17 @@
+.container{
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+    margin: 10px;
+}
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: aquamarine;
+}
+.container.one > .item.three{
+    background-color:cadetblue;
+    position:absolute;
+    left: 100px;
+}

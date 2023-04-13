@@ -1,0 +1,133 @@
+.meme-container{
+  height: 35em;
+  width: 38em;
+  background-color: whitesmoke;
+  font-family: 'Karla', sans-serif;
+}
+/* ------------------ Header ---------------------- */
+.header-container nav{
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  height: 4em;
+  display: flex;
+  align-items: center;
+}
+.navBar ul{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+}
+.navBar li{
+  list-style-type: none;
+  margin-left: 0.5em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.navBar img{
+  height: 2em;
+  width: 2em;
+}
+/* ---------------------- Form ---------------------- */
+.form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8em 0.5em;
+  padding: 1.5em;
+}
+
+form input{
+  height: 2em;
+  width: 16.3em;
+  border: 0.08em solid darkgray;
+  border-radius: 0.2em;
+  padding: 0.4em;
+}
+
+form button{
+  grid-column: 1 / span 2;
+  height: 3.1em;
+  color: #fff;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  border: none;
+  border-radius: 0.2em;
+  font-weight: 600;
+}
+
+.meme-image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-top-text{
+  position: absolute;
+  top: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  color: whitesmoke;
+  text-shadow: 0.05em 0.05em 0 black;
+}
+.image-bottom-text{
+  position: absolute;
+  bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  color: whitesmoke;
+  text-shadow: 0.05em 0.05em 0 black;
+}
+
+.image-container img{
+  width: 29.2em;
+  height: 20.2em;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

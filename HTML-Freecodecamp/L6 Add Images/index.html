@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Images</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    <hr />
+
+    <nav>
+      <ul>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#address">Address</a></li>
+        <li><a href="#schedule">Daily Schedule.</a></li>
+
+        <li><a href="html5.png" download>Download HTML5 logo</a></li>
+
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      </ul>
+    </nav>
+
+    <section id="html">
+      <h2>I'm ready to learn Web Dev</h2>
+      <p>This is my first web page.</p>
+
+      <!-- We add images using img tag and link(relative or absolute) to resource 
+        using src attribute.
+
+        alt attribute is used to describe the image when the image doesn't load 
+        may be due to no internet connection etc. It is good for assistive technology,
+        as the screen reader will read the alt attr text when the image is not displayed.
+
+        can add title attribute but the text will not be read by screen readers
+        but just be seen when someone hovers on the image. Not necessary to add.
+
+        can add either height or width or both to the image. If we add only one attribute
+        then the browser sets the height automatically to maintain tghe aspect ratio.
+        It is now recommended to provide height and width though we can override these
+        values by css. When we specifically add height and width to the tag, it tells the
+        browser already how much space the image will take.
+        Cumulative Layout Shift (or CLS) is a measure of how much a webpage unexpectedly shifts during its life.
+        High CLS means bad performance. As, different resources(images, banners) load on different speeds and some may load
+        after the whole page has loaded and can cause the content to shift depending on how 
+        much space the resource would take.
+     -->
+      <img
+        src="html_logo.png"
+        alt="HTML5 logo"
+        title="This is HTML5 Logo"
+        width="200px"
+        height="200px"
+      />
+
+      <h3 id="schedule">My Daily Schedule</h3>
+      <p>Let me tell you how:</p>
+
+      <ul>
+        <li>...I learn more about web dev</li>
+        <li>...I plan out my schedule</li>
+        <li>
+          ...I use resources from
+          <abbr title="Mozilla Developer Network">MDN</abbr>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+    <!-- 
+      br*150
+      inserts 150 line breaks in our page
+        to see the lazy loading of image happeing in the dev tools.
+        disable cache as the browsers know to load cached images after they're loaded
+        for the first time.
+     -->
+
+    <section id="address">
+      <h2>I'm planning a vacation</h2>
+      <h3>I've heard good things about Carribean.</h3>
+      <!-- we can add a loading attribute whoch can have 2 values.
+        1. eager(default) -> load the resources even if they're not seen currently as they
+        are somewhere very below in the page and user needs to scroll down the page to see it.
+        2. lazy -> load the resource only when the user is about to see the image as he's scrolled down
+        the page. This is used to improve performance by loading the page faster.
+        As it only loads images when needed.
+        If the image is not seen but is near to the image downloaded already 
+        chrome still load that image. As it loads images much earlier.
+     -->
+      <!-- 
+        To give images a caption instead of using a <p> element
+        we wrap our image inside figure tag and add a figcaption element
+        inside the figure element along with img element.
+        Using a paragraph may visually see as a caption to the image
+        but it will not tell the assistive technology that the written content
+        is a caption for the image.
+        
+        Figure element is not only for images we can use other elements inside figure
+        along with figcaption. But it gives identation by default.
+     -->
+      <figure>
+        <img
+          src="caribbean.jpeg"
+          alt="Carribean Beach"
+          width="400"
+          height="225"
+          loading="lazy"
+        />
+        <!-- This by default give right identation to the image. -->
+        <figcaption>Carribean Beach Gateway</figcaption>
+      </figure>
+      <figure>
+        <figcaption>Carribean Beach Picture</figcaption>
+        <p>
+          <!-- The <code> HTML element displays its contents styled in 
+                a fashion intended to indicate that the text is a short 
+                fragment of computer code.
+             -->
+          <code>&lt;h4&gt;Hello World&lt;h4&gt;</code>
+        </p>
+      </figure>
+      <ul>
+        <li>
+          <p>I've heard good things about going here:</p>
+          <address>
+            FCA 627 'A'
+            <br />SGM Nagar <br />Faridabad 121001
+          </address>
+          <figure>
+            <img
+              src="vacation.jpeg"
+              alt="Vacation Image"
+              width="400"
+              height="225"
+              loading="lazy"
+            />
+            <figcaption>Vacation Image</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <a href="#">Back To Top</a>
+    <a href="/">Go to Root page</a>
+  </body>
+</html>
+
+<!-- Download free images
+     https://placeholder.com/
+     https://unsplash.com/
+ -->

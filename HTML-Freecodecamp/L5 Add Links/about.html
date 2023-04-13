@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    <hr />
+
+    <nav>
+      <ul>
+        <!-- #html represents the id of a section.
+        The below tags link to the different sections on the same page.
+        URL change -> http://127.0.0.1:5500/L5%20Add%20Links/about.html#address
+        Browser by default will scroll to the section selected.
+     -->
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#address">Address</a></li>
+        <li><a href="#schedule">Daily Schedule.</a></li>
+        <!-- download attribute on a tage make the link a downloadable link. -->
+        <li><a href="html5.png" download>Download HTML5 logo</a></li>
+        <!-- target attribute specifies where to open the web page.
+        By default the web page loads in the current tab
+    by setting target=_blank the page will be open in a new tab.  -->
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      </ul>
+    </nav>
+
+    <section id="html">
+      <h2>I'm ready to learn Web Dev</h2>
+      <p>This is my first web page.</p>
+
+      <h3 id="schedule">My Daily Schedule</h3>
+      <p>Let me tell you how:</p>
+
+      <ul>
+        <li>...I learn more about web dev</li>
+        <li>...I plan out my schedule</li>
+        <li>
+          ...I use resources from
+          <abbr title="Mozilla Developer Network">MDN</abbr>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section id="address">
+      <ul>
+        <li>
+          <p>I've heard good things about going here:</p>
+          <address>
+            FCA 627 'A'
+            <br />SGM Nagar <br />Faridabad 121001
+          </address>
+        </li>
+      </ul>
+    </section>
+    <!-- It will scroll to the top in the same web page.
+        So, if we want to link to different sections of the web page
+        we need to give them an id and the add links by setting #{id} property
+        to it.
+     -->
+    <a href="#">Back To Top</a>
+    <a href="/">Go to Root page</a>
+  </body>
+</html>
+<!-- Tip: use short description of the link between anchor tags for the link
+not something generic like click here as won't be good for screen readers. -->

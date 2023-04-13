@@ -1,0 +1,5 @@
+.footer--list ul{
+    display: flex;
+    list-style-type: none;
+    grid-column: span 3;
+}

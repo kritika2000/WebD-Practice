@@ -1,0 +1,51 @@
+.form--container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 35px 40px 300px;
+    box-sizing: border-box;
+    padding: 30px;
+    gap: 17px;
+    font-family: "Karla", sans-serif;
+}
+.submit{
+    grid-column: 1 / span 2;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    font-family: "Karla", sans-serif;
+}
+.form--container input{
+    font-family: "Karla", sans-serif;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+.image--container{
+    position: relative;
+    height: 100%;
+    grid-column: 1 / span 2;
+}
+.random--image{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+}
+.top-text{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.bottom-text{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

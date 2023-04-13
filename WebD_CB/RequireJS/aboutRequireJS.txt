@@ -1,0 +1,15 @@
+RequireJS is a js file and a module/script loader. It packages all the js scripts in 
+one file.
+
+Use-case:
+Easy to manage a lot of js files.
+For eg: You have a lot of script files added in your html file
+and you want to make changes in any one of those script files.
+
+Why we load the js file two times(once in script tag where the require.js 
+is loaded and next in require(['filename']))?
+
+require.js script tag is an asynchronous call i.e. the js files will be loaded
+simultaneously.
+
+

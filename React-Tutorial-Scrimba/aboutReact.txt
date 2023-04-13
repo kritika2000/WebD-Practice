@@ -1,0 +1,8 @@
+React converts the JS object that the JSX returns to real 
+DOM elements when we render it using ReactDOM.render().
+
+React is composable i.e. we can create our custom components
+and reuse them again and again.
+
+https://blog.logrocket.com/virtual-dom-react/#concept-review-what-is-dom
+https://blog.logrocket.com/the-beginners-guide-to-mastering-react-props-3f6f01fd7099/

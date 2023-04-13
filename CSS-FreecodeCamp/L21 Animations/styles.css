@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div{
+    width: 150px;
+    height: 150px;
+    /* border: 3px solid black; */
+    border-top: 3px solid hotpink;
+    border-bottom: 3px solid black;
+    border-left: 3px solid darkred;
+    border-right: 3px solid cyan;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child{
+    background-color: dodgerblue;
+    /* translate move the element along x and y axis.
+        but transforms(skew, rotate, scale) do not move the element.
+        If % is used in trnaslate it is % of the size of the element itself.
+    */
+    /*  50% move the element by 50% of 150px = 75px to the right.
+        -50% move it to the left. We can use absolute values also.
+    */
+    /* transform: translateX(50%); */
+    /* -2rem move 16px upwards and 2rem moves downwards.
+    Translate doen't not affect positioning of other elements.
+     */
+     /* this style will be overridden by the first transform */
+    /* transform: translateY(-2rem); */
+
+    /* ----------ROTATE---------- */
+
+    /* positive angle rotate the element in clockwise direction*/
+    /* transform: rotate(180deg); */
+
+    /* We can rotate in along individual axes -> X, Y, Z */
+    /* 90deg will make the div disappear. */
+    /* 180 deg completely flip the div element */
+    /* transform: rotateX(180deg); */
+
+    /* ----------SCALE-------- */
+    /* It change the size of the element depending on the value.
+    It can be in %, 1, 2, 3(means 3 times). .5 means half.
+     */
+    /* scale(x, y) -> scaleX(x), scaleY(y) */
+    /* transform: scale(.5, .5); */
+
+    /* -------------SKEW-------------- */
+    /* Skew tilt the element from left to right(x axis) and top to bottom(or vice-versa) */
+    /* transform: skew(10deg, -10deg); */
+}
+div:nth-child(2){
+    background-color: yellow;
+    /* transform: translate(2rem); */
+    /* rotate or flipping the element along y-axis i.e. from left ot right */
+    /* transform: rotateY(180deg); */
+}
+div:last-child{
+    background-color: limegreen;
+    /* combining both X and Y translation. */
+    /* transform: translate(100%, -2rem); */
+    /* transform: translate(100%, 10%);
+    Rotating clockwise in circular direction. It is same as rotate().
+    */
+    /* transform: rotateZ(90deg); */
+}
+
+div:hover{
+    background-color: midnightblue;
+    /* ------------------TRANSITION---------------- */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#which_css_properties_can_be_transitioned */
+    /* which property to change */
+    /* transition-property: background-color, transform; */
+    /* takes 5s to change the color to midnightblue on hover */
+    /* transition-duration: 2s, 4s; */
+    /* delay to start the transition. */
+    /* transition-delay: 1s; */
+    transition: all 2s ease-out .5s;
+    /* timing functions - https://blog.logrocket.com/understanding-animation-transition-timing-functions-css/#what-are-timing-functions
+    linear -> have smae speed from start to end.
+    ease(by default) -> start slow, fast in middle, end slow.
+    ease in -> start slow, end fast.
+    ease-out -> start fast, end slow.
+    ease-in-out -> start slow, fast in the middle, end slow(start and end speeds are same).
+
+    */
+    /* transition-timing-function: ease-in; */
+    /* transition(shorthand) -> transition-property, duration, timing-function, delay */
+}
+
+div:last-child:hover{
+    transform: rotate(180deg);
+}
+
+/* -----------------ANIMATIONS------------------ */
+
+.animate{
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    /* number of times the animation will repeat */
+    animation-iteration-count: 2;
+    /* change the direction, alternate etc */
+    animation-direction: normal;
+    /* backwards puts the element in the original state after the animation ends */
+    animation-fill-mode: forwards;
+}
+
+/* we need @keyframes to apply the animation. */
+/* slide is animaition name */
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    33%{
+        transform: translateX(300px) rotate(180deg);
+    }
+    66%{
+        transform: translateX(-300px) rotate(-180deg);
+    }
+    100%{
+        transform: translateX(0) rotate(360deg);
+        background-color: rebeccapurple;
+    }
+}

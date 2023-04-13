@@ -1,0 +1,52 @@
+/*
+    We can have round and elliptical borders.
+    shorthand property -> border - border-width border-style border-color
+    border-width = border-top-width border-right-width border-bottom-width border-left-width
+    border-style = border-top-style border-right-style border-bottom-style border-left-style
+    border-color = border-top-color border-right-color border-bottom-color border-left-color
+    border-bottom = border-width border-style border-color(for bottom border only)
+*/
+.borders{
+    height: 200px;
+    width: 200px;
+    background-color: papayawhip;
+    border-top-width: 1px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-style: solid;
+    border-bottom: 4px dotted blueviolet;
+    border-color: brown;
+}
+/* 
+    to make an element round we need to set same height and width property
+    and then set the border-radius equals to half the height and width.
+
+    border-radius = border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius
+    Here, we assume we have 4 circles on the corners of the div(square/rectangle) and give the 
+    mentioned radius.
+
+    When we do rounding, then all the circles in the corner will collapse.
+*/
+.round{
+    height: 200px;
+    width: 400px;
+    /* border-radius: 100px; */
+    /* 
+        we can set border-radius in %
+        border-top-left-radius: 50% -> x-axis = 50% of box width, y-axis = 50% of box height.
+        width = 400px, x-axis = 200px and height = 200px, y-axis = 100px.
+    */
+    /* border-radius: 25px 50px 75px 100px; */
+    border-radius: 10% 10% 10% 10%;
+    background-color: purple;
+}
+
+.elliptical{
+    /* elliptical borders */
+    height: 400px;
+    width: 400px;
+    /*  border-top-left-radius: 10%  20% -> x-axis = 10% of box width, y-axis = 20% of box height.
+        width = 400px, x-axis = 40px and height = 400px, y-axis = 80px. */
+    border-top-left-radius: 10% 20%;
+    background-color: maroon;
+}

@@ -1,0 +1,32 @@
+cat command
+
+cat [options] [filename1]
+cat -> echo whatever text we enter, press ctrl + D to exit the file.
+cat filename -> echo the content of the file.
+cat file1 file2 -> display the content of both the files.
+
+Redirection -> capturing content from one file and sending it to another.
+output > file.
+cat > file -> redirect whatever text typed on the terminal to file.
+cat file1 > file2 -> redirect content of file1 to file2(creact file2 if not exist already).
+
+Create/Remove Directories
+
+mkdir dir -> create new directory in pwd
+mkdir dir/dirsub -> create subdirectory to dir.
+mkdir -p user/user1 -> create directories with this path which doesn't even exist. 
+rmdir user/user1/user2 -> remove user2 directory.
+rmdir -p  user/user1/ -> remove whole direcyory structure.
+
+Copy Files and Directories.
+
+cp options source destination
+cp file1.txt file2.txt -> create files if do not exist and copy the content from file1 to file2
+cp file1 file2 dir -> copy file to directory.
+
+Rename/Move files
+
+mv options source(s) destination.
+
+mv file1.txt newFile.txt -> rename file1.txt to newFile.txt
+mv file.txt dir -> move file to directory dir.

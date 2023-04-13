@@ -1,0 +1,60 @@
+h1{
+  color: blueviolet;
+}
+
+/* .pb.p1{
+  color: bisque;
+}
+
+.pa{
+  background-color: aqua;
+  padding: inherit;
+} */
+
+.list #email, .list #phn, li a{
+  background-color: blanchedalmond;
+}
+
+/* ul > a{
+  background-color: aqua;
+}
+
+.para{
+  background-color: azure;
+  padding: 30px;
+} */
+/* #div1 {
+  height: 100px;
+  color: red;
+  background-color: blueviolet;
+}
+
+#div1Child {
+  height: inherit;
+  background-color: azure;
+  margin: 30px;
+} 
+.div1Child.div1Child1 .divDivChild{
+  color: white;
+}
+
+#navbar p.demo.d1{
+  color: green;
+}
+
+body {
+  color: green;
+}     
+.my-class-1 a {
+  color: inherit;
+}
+        
+.my-class-2 a {
+  color: initial;
+}
+        
+.my-class-3 a {
+  color: unset;
+}
+ 
+ */

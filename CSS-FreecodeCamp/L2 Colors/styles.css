@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1.5; /* Space between lines */
+    /* 
+        apply background color to body element.
+        140 colors available.
+        backgound: blue is a shorthand for background.
+        It also allows us to set other background properties.
+        
+        We can use rgb() function to set the color. Every color is a proportion
+        of some red, green and blue(0-255).
+        Black -> rgb(0, 0, 0);
+        White -> rgb(255, 255, 255);
+
+        There is something called rgba, there is a alpha channel.
+        This guides the transparency. It has values from 0-1.
+        0 makes it most transparent and it becomes least transparent as we move
+        up to 1.
+
+        Picking colors -> https://coolors.co/
+        Color Contrast Checker -> https://coolors.co/contrast-checker/112a46-acc8e5
+    */
+    background-color: papayawhip;
+    /* color property sets the font color */
+    /* color: darkblue; */
+    color: rgb(0, 0, 255);
+}
+
+p{
+    /* color: rgba(0, 0, 0, 0.5); */
+    /* 
+        It has values from 0-F. Every two letters are rgb components 
+        White -> #FFFFFF
+        Black -> #000000 or #000 (if 2 values are same).
+        Red -> #FF0000 or #F00
+    */
+
+    /* combining color with opacity would work like rgba */
+    color: #000000;
+    opacity: 0.5;
+
+}

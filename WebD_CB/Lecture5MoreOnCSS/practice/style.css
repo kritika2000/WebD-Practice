@@ -1,0 +1,48 @@
+*{
+    background-color: rgb(253, 231, 205);
+}
+.div{
+    text-align: center;
+}
+.fill{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+}
+.fill.submit{
+    margin-top: 20px;
+    background-color: rgb(1, 207, 211);
+    color: aliceblue;
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    box-shadow: lightslategrey 3px 3px 3px;
+    border-radius: 5px;
+}
+.fill.submit:hover{
+    background-color: rgb(62, 212, 214);   
+}
+.fill.submit:active{
+    transform: translate(1px, 1px);
+    box-shadow: lightslategray 1px 1px 1px;
+}
+.hd{
+    font-family: fantasy;
+    font-weight:bolder;
+    font-size: x-large;
+    /* ensures the content is hidden until the animation */
+     /* overflow: hidden;  */
+}
+#wlc{
+    color: rgb(5, 71, 112);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font: bolder;
+    animation: changeColor 2s infinite;
+}
+@keyframes changeColor{
+    50%{
+        color: rgb(33, 211, 214);
+    }
+}

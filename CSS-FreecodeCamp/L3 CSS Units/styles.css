@@ -1,0 +1,92 @@
+/* 
+    Browser has default syles(default margin on the outline, spaces between elements) set already which we can override by setting our styles.
+    To reset user agent styles we can do css reset.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+    units determine the size of everything on your page.
+    absolute units -> pc, px, pt -> we use px more often.
+
+    We use absolute value when they doesn't depend on the window size of the device
+    as they remain same on all type of devices.
+
+    Relative units -> percentages(%), em ,rem, vh, vw etc;
+    % -> are % of some another quantity.
+
+    rem -> typically use to set the font size of the root element(html).
+    1rem = 1 x font-size of the root element.
+
+    em -> relative to it's parent font-size if not set on the element otherwise
+    it will look at the element itself, typically used for setting margins and paddings.
+    If we set the font-size on an element = 2em it means 2 x font size of the parent.
+    But for paddings and margins we have padding: 2em -> 2 x font-size of the element 
+    itself(if not set then look at the parent).
+
+    vh -> 1% of viewport height
+    vw -> 1% of viewport width.
+
+    Better way is to use rem i.e. to look at the root element for font-size
+    as using em the size will always dependent on the parent.
+*/
+
+html{
+    /* 
+        now the default size will be overwritten that's why we usually do not set the font-size in root
+        , we let the browser handle that.
+    */
+    font-size: 22px;
+}
+
+body{
+    /* 
+    set the min height of the body to 100vh even if the content is smaller. 
+    setting min-height body covers the conten outside of the 100vh.
+    setting background color won't show the difference as it is inherited by the children.
+    */
+    /* height: 100vh; */
+    min-height: 100vh; 
+    
+}
+
+p{
+    /* 16px is the default size for any browser we can chane it in Settings->Appearance */
+    /* font-size: 16px; */
+    /* 
+        1rem is requal to 1 x font size of the root element(html)
+        which is 16px by default if we haven't set it in html element.
+        rem is relative to the root element not it's parent. 
+    */
+    font-size: 1rem;
+    width: 40ch; /* 40 characters per line */
+}
+
+/* 
+    We can use px or absolute value for setting the border.
+*/
+
+header {
+    width: 50%;
+    font-size: 2em;
+}
+
+h1{
+    border: 2px dashed black;
+    /* 
+        as h1 is block level element, by default it's width is 100% of parent's width.
+        If parent's width is 50% of the viewport width then the h1's width would be 25% of the viewport
+        if it is 50% of it's parent.
+    */
+    width: 100%;
+    /* width: 50%; */
+    /* 
+        2 x font size of the parent(header) which has a font size of 2 x font size of parent(body -> root)
+        which is 22px so it's 88px
+    */
+    /* font-size: 2em; */
+    font-size: 3rem;
+    padding: 1em; /* padding = 1 x font-size of the element(3rem) = 3 x 22px = 66px */
+}

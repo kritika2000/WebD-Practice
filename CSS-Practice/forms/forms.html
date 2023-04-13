@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
+    <div class="formContainer">
+      <h1>Application Form</h1>
+      <form action="#" method="get">
+        <label for="fullName">Full Name</label>
+        <div id="fullName">
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            placeholder="First Name"
+            autofocus
+          />
+          <input
+            id="lastName"
+            name="lastName"
+            type="text"
+            placeholder="Last Name"
+          />
+        </div>
+        <label for="course">Which course are you applying for?</label>
+        <div id="course">
+          <input
+            id="dsa"
+            type="radio"
+            value="Data Structures And Algorithms"
+            name="course"
+          />
+          <label for="dsa">Data Structures And Algorithms</label>
+          <input id="webD" type="radio" value="Web Development" name="course" />
+          <label for="webD">Web Development</label>
+          <input
+            id="android"
+            type="radio"
+            value="Android App Development"
+            name="course"
+          />
+          <label for="android">Android App Development</label>
+        </div>
+        <label for="dob">Date of Birth</label>
+        <div>
+          <input id="dob" name="dateOfBirth" type="date" />
+        </div>
+        <label for="gender">Gender</label>
+        <div id="gender">
+          <input id="male" type="radio" value="Male" name="gender" />
+          <label for="male">Male</label>
+          <br />
+          <input id="female" type="radio" value="Female" name="gender" />
+          <label for="male">Female</label>
+          <br />
+          <input id="others" type="radio" value="Others" name="gender" />
+          <label for="others">Others</label>
+        </div>
+        <label for="stream">Stream/Branch</label>
+        <select id="stream">
+          <option value="">--Please choose an option--</option>
+          <option value="Computer Science and Engineering">
+            Computer Science and Engineering
+          </option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+        </select>
+        <div id="submit">
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

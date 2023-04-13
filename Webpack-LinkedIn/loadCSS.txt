@@ -1,0 +1,9 @@
+We can load CSS, SASS with webpack.
+The benefit of loading CSS as a module is that the webpack will
+only bundle styles that our app uses.
+We can require or import styles for use in certain files
+and it will perform transformations on Sass and less 
+to turn it into CSS.
+In order to import and load CSS in a module, we need a 
+loaded(style-loader, css-loader) ->  npm install style-loader css-loader --save-dependencies
+For transformation add config in webpack.config.js file.

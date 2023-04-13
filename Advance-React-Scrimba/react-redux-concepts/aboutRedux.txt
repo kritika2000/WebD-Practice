@@ -1,0 +1,39 @@
+https://blog.logrocket.com/understanding-redux-tutorial-examples/
+
+Why Redux(state mamangement tool) when we've states managed by React itself?
+--> with React we need to create states for many components, sometimes
+they're local to a components and other times they're passed from parent
+component. This situation becomes complex when the app grows bigger(many components).
+
+Problems:-
+
+How to handle state that is needed by whole application?
+Context can solve this problem by not doing props drilling but redux is another
+approach to do it.
+
+Lack of organization?
+Some sate can alter other state in a component etc.
+
+Guiding principals:-
+
+1. Single source of truth(global state).
+Outsource data needs to a global state. Eg:- if one of your component needs 
+data for AJAX call, redux fetch the data and store it in a global state.
+
+2. States(global state) are immutable directly but can only be changed using actions.
+Actions describe what kind of change it wants to make.
+
+3. Any changes in states happen with pure functions called reducers.
+Pure Functions -> the functions returns same result when same parameters are passed
+i.e. results do not depend on the outside sources.
+The reducer takes the previous state and actions to detrmine the new value for the state.
+
+Fundamentals:-
+
+1. Actions -> the kind of change.
+2. Dispatch -> take action to reducer.
+3. Reducer -> take desription of the change it wants to make and decide on 
+the new value of state. 
+4. Store -> Collection of above things.
+
+Redux is meant to be a single source of truth for our application.

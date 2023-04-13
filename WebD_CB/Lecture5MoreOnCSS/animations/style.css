@@ -1,0 +1,48 @@
+.container{
+    margin: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
+    
+}
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 2px;
+    background-color:cadetblue;
+    /* can't set height and width in case of inline
+    but is possible when display is inline-block */
+
+    /* inline elements add space because of line break */
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+.one{
+    /* reaches early */
+    animation-timing-function: ease-in;
+    background-color: pink;
+}
+.two{
+    /* starts early */
+    animation-timing-function: ease-out;
+    background-color: palevioletred;
+}
+.three{
+    animation-timing-function: ease-in;
+    background-color: lightblue;
+}
+.four{
+    animation-timing-function: ease-out;
+}
+.five{
+    /* default:starts slow but fast in the middle and then ends slow */
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce {
+    50%{
+        background-color: blueviolet;
+        transform: translateY(300px);
+    }
+
+}

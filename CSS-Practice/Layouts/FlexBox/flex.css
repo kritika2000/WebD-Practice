@@ -1,0 +1,80 @@
+/* Terminologies:-
+
+1. The main axis is the axis running
+in the direction the flex items are laid out in.
+
+2. The cross axis is the axis running perpendicular 
+to the direction the flex items are laid out in. 
+
+3. The parent element that has display: flex
+set on it (the <section> in our example) is called the 
+flex container.
+
+4.The items laid out as flexible boxes inside the flex container 
+are called flex items.
+
+*/
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container{
+    /* width: 600px; */
+    background-color: bisque;
+    /* height: 500px; */
+}
+
+header {
+    background: purple;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    /* padding: 10px; */
+    margin: 10px;
+    background: aqua;
+    /* flex is a shorthand property -> flex-grow flex-shrink flex-basis.
+    flex-shrink -> This value specifies how much an item 
+    will shrink in order to prevent overflow. */
+    /* to set how much space each article will take up, each article will be 200px wide. */
+    flex: 200px;
+    /* 1 means all articles take up equal amount of space */
+    /* flex: 1; */
+    /* flex 1, 200px -> Each flex item will first be
+    given 200px of the available space. After that,
+    the rest of the available space will be shared 
+    according to the proportion units." */
+
+
+}
+article:nth-of-type(3) {
+    /* third item will take up twice as much space as other articles */
+    flex: 2 200px;
+  }
+
+section{
+    /* by default "flex" property makes the flex container a block element
+    If we want to make it behave like an inline element, then we've to 
+    set it to inline-flex. */
+    display: flex;
+    /* sets the direction of flex items, row by default*/
+    /* flex-direction: row-reverse; */
+    /* One issue that arises when you have a fixed width 
+    or height in your layout is that eventually your 
+    flexbox children will overflow their container, 
+    breaking the layout.  */
+    flex-wrap: wrap;
+}
+/* flex-flow: shorthand for flex direction and flex-wrap */

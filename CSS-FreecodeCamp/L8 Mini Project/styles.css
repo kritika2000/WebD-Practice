@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Shantell+Sans:wght@300&display=swap');
+
+html{
+    font-family: 'Shantell Sans', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: .5em;
+    text-align: center;
+}
+
+nav h2{
+    background-color: gold;
+}
+nav{
+    border: 2px solid #333;
+    border-radius: 2rem;
+    max-width: 50%;
+    margin: 0 auto 1rem;
+    /* hide the overflown background-scolor or set the border radius to the  ineer element(h2) also */
+    /* overflow: hidden; */
+    line-height: 2;
+}
+
+h2{
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+   
+    border-top: 1px solid #333;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* only on the link */
+:is(li) a:hover, a:focus{
+    background-color: #333;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+li:last-child a{
+    border-radius: 0 0 2rem 2rem;
+}
+
+li a{
+    padding: .5em;
+    display: block;
+}

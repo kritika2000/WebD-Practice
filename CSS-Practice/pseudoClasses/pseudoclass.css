@@ -1,0 +1,150 @@
+/***************** Links *****************/
+/* Follow LVHA order for links
+Links are styled when they have href attribute.
+*/
+
+a:link{
+    color: yellowgreen;
+}
+a:visited{
+    color:coral;
+}
+a:hover{
+    background-color: cornflowerblue;
+}
+a:active{
+    color: darkblue;
+}
+/* applies to all links whether they're visited or not */
+:any-link{
+background-color: chocolate;
+/* color with specific link, visited classes will be applied */
+color: whitesmoke; 
+}
+
+/****************  :checked  *******************/
+
+/* this selector selects any radio, checkbox, option 
+element(input) that is checked 
+or toggled to an "on" state.
+*/
+div{
+    margin-top: 30px;
+}
+input:checked + label{
+    background-color: chartreuse;
+}
+
+/********** :disabled/:enabled ************/
+/* It is applied on a disabled element */
+input:disabled, button:enabled{
+    background-color: blue;
+}
+
+/******* :empty **********/
+
+.emptyDiv p:empty{
+    height: 30px;
+    width: 30px;
+    background-color: brown;
+}
+
+/********* first-child ***********/
+/* represents the first element of it's parent
+ among a group of sibling elements. */
+/* p must be the first child */
+.firstChildDiv p:first-child{
+    background-color: black;
+    color: chartreuse;
+}
+
+/********* first-of-type **********/
+/* represents the first child of it's type of the parent among a group of siblings */
+/* p need not be tob the first child */
+.firstOfTypeDiv p:first-of-type{
+    background-color: purple;
+    color: pink;
+}
+
+/*********** :focus ***********/
+/* represents an element (such as a form input) 
+that has received focus. */
+.focusDiv input[type="text"]:focus{
+    background-color: brown;
+}
+
+/********** :focus-within **********/
+/* matches an element if the element or any of
+ its descendants are focused.  */
+
+.focus-withinDiv{
+    border: 2px solid green;
+    width: 500px;
+    height: 50px;
+ }
+ .focus-withinDiv:focus-within{
+   background-color: aquamarine;
+}
+
+/****************** :in-range ******************/
+/* represents an <input> element whose current value is within 
+the range limits specified by the min and max attributes. */
+.focus-withinDiv input{
+
+}
+
+.focus-withinDiv input[type="number"]:in-range{
+border: 5px solid green;
+}
+.focus-withinDiv input[type="number"]:out-of-range{
+    border: 5px solid red;
+}
+
+/************** :invalid/:valid *************/
+
+.invalidDiv{
+    border: 5px solid green;
+    width: 50%;
+    height: 75px;
+}
+.invalidDiv:invalid{
+    border: 5px solid red;
+}
+.invalidDiv input:invalid{
+    background-color: rgb(245, 96, 96);
+}
+.invalidDiv input:valid{
+    background-color: lightgreen;
+}
+
+/**********************  :is()  **********************/
+
+/* "," separator apply properties on individual selectors as if they're 
+separately written */
+/* .isDiv header, main, .isDiv footer p:hover{
+    background-color: aquamarine;
+} */
+/* Selects any paragraph inside a header, main
+   or footer element that is being hovered */
+   :is(header, main,.isDiv footer) p:hover {
+    background-color: red;
+    /* cursor: pointer; */
+  }
+  
+  /* The above is equivalent to the following */
+  /* header p:hover,
+  main p:hover,
+  footer p:hover {
+    color: red;
+    cursor: pointer;
+  } */
+
+/*************************  :not()  **********************/
+
+.notDiv p:not(.fancy){
+    background-color: cadetblue;
+}
+
+:not(div, p){
+    color: darkblue;
+}

@@ -1,0 +1,133 @@
+/* 
+CSS Grid Layout is a two-dimensional layout system for the web. 
+It lets you lay content out in rows and columns. 
+*/
+/* 
+The explicit grid is the one that you create using 
+grid-template-columns or grid-template-rows.
+The implicit grid is created when content is placed outside of that grid,
+such as into our rows.
+*/
+/* 
+100-pixel tall tracks won't be very useful if we add
+content into those tracks that is taller than 100 pixels,
+in which case it would cause an overflow. It might be better 
+to have tracks that are at least 100 pixels tall and can still 
+expand if more content becomes added.  
+*/
+/* 
+grid track -> rows and columns of a grid.
+grid area -> The total space surrounded by four grid lines. 
+*/
+
+/* any items placed outside the explicit grid are place inside the implicit grid.
+For eg:- setting the row height with grid-template-rows for one row but there are
+items left to display in rows will be placed in implicit grid. */
+ 
+body {
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+.container {
+    /* make the container a one column grid and all it's child items as grid items. */
+    /* elemets will appear one after another. */
+
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: lightsalmon;
+
+    /* add columns to the grid. */
+    /* 
+    In addition to creating grids using lengths and percentages, 
+    we can use the fr unit to flexibly size grid rows and columns. 
+    fr unit represents a fraction of the available space in the grid container.
+     */
+    /* The fr unit distributes space proportionally. */
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
+    /* grid-template-columns: repeat(2, 1fr) min-content; */
+
+    /* we can choose to explicitly name the lines. */
+    /* grid-template-columns: [first] 50px [line2] 70px [line3] auto [col4-start] 80px [five] 100px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+   
+    /* define a definite size for grid items. */
+    /* grid-auto-rows: minmax(60px, auto); */
+    /*  implicit grid -> size of atleast 100px and maximum of auto if content length is > 100px */
+    /* grid-auto-rows:  minmax(25px, auto); */
+    /* grid-auto-flow: column; */
+    grid-auto-rows: 70px;
+    /* grid-auto-flow: row dense; */
+    /* grid-auto-columns: 100px; */
+    /* grid-template-rows: 100px; */
+    /* grid-auto-rows: 200px 100px; */
+    /* gap -> row-gap column-gap */
+    /* row-gap: 10px;
+    column-gap: 10px; */
+}
+.container > div {
+    /* padding: 10px; */
+    background-color: rgb(207,232,220);
+    border: 1px solid rgb(79,185,227);
+}
+.box1 {
+    /* property defines on which column-line the item will start. */
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+    /* grid-column -> grid-column-start / grid-column-end: 4; */
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center; */
+    /* z-index: 1; */
+  }
+  .box2 {
+    /* grid-column-start: 3;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+}
+.box1 div{
+    /* background-color: yellow;
+    border: 1px solid rgb(79,185,227); */
+}
+.grid{
+    margin-top: 10px;
+    display: grid;
+    background-color: pink;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(50px, auto));
+    gap: 2px 2px;
+}
+.grid > div{
+   background-color: antiquewhite;
+   border: 1px solid black;
+}
+.grid > div:first-child{
+    /* grid-area -> grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+   /* grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 3; */
+   grid-area: 1 / 1 / 4 / 2;
+}
+.grid > div:nth-child(2){
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+ }
+ .grid > div:nth-child(3){
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: span 2;
+   grid-row-end: 3;
+ }
+ .grid > div:nth-child(4){
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 3;
+   grid-row-end: 4;
+  }
+ 

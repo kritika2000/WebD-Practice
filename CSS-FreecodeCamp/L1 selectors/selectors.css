@@ -1,0 +1,131 @@
+/* 
+    Universal Selector(0) -> selects everything on the page
+    We don't use that often.
+*/
+*{
+    font-family: monospace;
+}
+/* 
+    below is a css rule.
+
+    if some CSS property is not spelled correctly or there is some error
+    browser will just ignore that style and won't throw any error/warning.
+    To handle this issue we can use W3C CSS validation service.
+    https://jigsaw.w3.org/css-validator/validator
+ */
+
+/* 
+    element selector(1) -> h1, h2, body, p etc.
+    font-size is inherited to child elements So child elements
+    will have a font size of the value mentioned.
+    but h2 will take it's usual size even if it's a child element of body.
+*/
+
+body{
+    font-size: 25px;
+    color: burlywood;
+    border: 1px solid black;
+}
+
+p{
+    /* this font-size will be applied to <p> not from body */
+    font-size: 20px;
+    color: purple;
+}
+
+/* 
+    we can group selectors by comma when we have to apply 
+    same style to multiple elements 
+*/
+h1, h2{
+    color: blue;
+}
+
+/* 
+    Descendant Selector.
+    the below style means if there is an h2 which is a 
+    decendant of an h1 then apply the style. 
+*/
+
+h1 h2{
+    color: chocolate;
+}
+/* 
+    a better way to do this is to give the span element a class say 'highlight'
+    as the below(p span) will apply the style to all spans under a paragraph. May be we need
+    to apply the style to specific spans inside a paragraph only.
+*/
+/* p span{
+    text-transform: capitalize;
+    background-color: gold;
+} */
+.highlight{
+    text-transform: capitalize;
+    background-color: lightpink;
+}
+
+/* 
+    class selector(10) -> .classname given to an element.
+    classes are more specific than element selctors i.e they're give
+    higher precedence when a style is applied to an element through class and
+    element selctor that's why gray color is applied.
+    classes make styles reusable as multiple elements can be give same class.
+*/
+.gray{
+    color: gray;
+}
+
+/* 
+    id selector(100) -> ids are unique for an element.
+    Id selectors are more specific than class.
+    It is not a good practice 
+*/
+
+#second{
+    /* this color will be overridden by the color applied through gray class */
+    color: darkblue;
+    font-style: italic;
+}
+
+/* 
+    CSS -> CASCADING STYLE SHEET
+
+    Cascade -> If two styles have same specificity the the one written below
+    will be given precedence.
+
+    Specificity -> The selector which is more specific, that style will be applied.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+    Specificity Calculator -> https://specificity.keegan.st/
+
+    id(100)>class/pseudo-class/attribute-selctors(10)>element/pseudo-elements(1)>universal(0)
+
+    Inheritance -> When the element inherit the styles from it's parent.
+    color, font-size, line-height etc are inheritable properties.
+    borders, height, width properties etc are not inherited. 
+    Form elements do not inherit properties.
+
+    Setting a style to universal selector is not inheritance, * selects all elements
+    So the styles will be apllied to all elements depending on the specificity.
+
+    !important is an expection. It overrides everything even the inlne styles.
+    Avoid to use this.
+
+
+*/
+
+.para{
+    color: crimson;
+}
+
+form button{
+    /* we've to explicitly make them inherit the properties from parents. */
+    color: inherit;
+}
+
+/* 
+    p.divChild.para -> <p class="divChild para"> 
+    div .divChild -> <div><p class="divChild"></p></div>
+*/
+p.divChild.para{
+    background-color: cadetblue;
+}

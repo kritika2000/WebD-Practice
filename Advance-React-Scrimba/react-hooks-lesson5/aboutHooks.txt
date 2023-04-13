@@ -1,0 +1,2 @@
+Hooks are a way to manage state just like we 
+have lifecycle methods in class components.

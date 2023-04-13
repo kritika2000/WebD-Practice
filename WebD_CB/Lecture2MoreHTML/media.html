@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+
+<body>
+    <img src="Resources/image.jpeg" alt="Photo" height="300" width="300">
+    <br>
+    <!-- metadata: the thumnnail, size of the video, 
+        entire media file doesn't get loaded initially -->
+    <!-- preload="none" prevents browser to load the video unless user play it -->
+    <video preload="metadata" loop src="Resources/video.mp4" controls></video>
+    <audio controls src="Resources/audio.wav"></audio>
+</body>
+
+</html>

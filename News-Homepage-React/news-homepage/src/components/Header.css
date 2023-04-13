@@ -1,0 +1,18 @@
+.header--container{
+    padding: 0 1em;
+}
+.header--container ul {
+    list-style-type: none;
+    display: flex;
+    color: gray;
+    margin-left: auto;
+    justify-content: space-between;
+    width: 35em;
+}
+.logo{
+    height: 3.2em;
+    width: 3em;
+}
+.header--container{
+    display: flex;
+}

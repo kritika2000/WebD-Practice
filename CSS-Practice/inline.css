@@ -1,0 +1,15 @@
+.container{
+    background-color: rgb(188, 36, 61);
+    height: 300px;
+    width: 300px;
+    font-size: 0;
+    /* text-align: center; */
+}
+span{
+    background-color: antiquewhite;
+    font-size: 16px;
+    /* padding-top: 30px; */
+    display: block;
+    text-align: center;
+    /* margin: 0px; */
+}

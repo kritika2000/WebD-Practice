@@ -1,0 +1,17 @@
+Problem:- 
+In React, we can only pass data i.e. props and state downwards.
+If two sibling components want to share data, the only possible ways is to
+lift state-up.
+But lifting state upto the top level elements and then passing data down 
+is a tedious task.
+
+Prop drilling is the process in a React app where props are passed 
+from one part of a tree to another by going through other parts 
+that do not need the data, but only help in passing it through the tree.
+
+Context provides a way to pass data through the component tree 
+without having to pass down props manually.
+
+We wrap the component, which is common to the components(Consumers) requiring 
+same state/props, in a Provider and this Provider-Consumer pair allows to create
+a context tunnel and we can pass data through this tunnel.

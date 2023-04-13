@@ -1,0 +1,59 @@
+.container{
+    width: 40%;
+    background-color: aqua;
+    height: 100px;
+    display: flex;
+    /* on container */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+}
+.container div{
+    flex-basis: 100px;
+    /* without flex-wrap the flex items don not overflow the container */
+    justify-items: center;
+    /* so width will be applied upto a limit */
+    /* width: 100px; */
+    flex: 0 0 auto;
+    height: 50px;
+}
+.box1{
+    background-color: blueviolet;
+}
+.container .box2{
+    background-color: palevioletred;
+   
+   
+}
+.box3{
+    background-color: yellowgreen;
+}
+.container .box4{
+    background-color: burlywood;
+    
+   
+}
+.box5{
+    background-color: yellow;
+}
+.container .box6{
+    background-color:brown;
+   
+    
+}
+.center{
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    display: flex;
+    /* to place the child div in center. */
+    /* align items horizontally */
+    justify-content: center; 
+    /* align items vertically */
+    align-items: center;
+}
+.center div{
+    height: 25%;
+    width: 25%;
+    background-color: blue;
+}

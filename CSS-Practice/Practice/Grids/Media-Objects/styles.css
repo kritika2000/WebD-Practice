@@ -1,0 +1,29 @@
+.media{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid black;
+    background-color: lightblue;
+    grid-auto-rows: 100px;
+    grid-template-areas: "img content";
+    width: 75%;
+}
+/* .media .image{
+    background-image: url('../../../resources/chris.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    background-position: center;
+} */
+.media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
+.media .text{
+
+}

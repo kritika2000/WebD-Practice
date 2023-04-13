@@ -1,0 +1,143 @@
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning */
+
+body{
+    min-height: 200vh;
+}
+.outer-container{
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    /* setting position relative for the absolutely positioned element */
+    position: relative;
+}
+
+.inner-container{
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 100px auto;
+    /* nearest ancestor for the absoluted positioned elemment */
+    position: relative;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.absolute{
+    background-color: #00f;
+    /*  static is default for all elements */
+    /* position: static; */
+
+    /* 
+        the element is taken out of the normal documnent flow(for other elements it doesn't exist) and will be positioned relative
+        to the nearest postioned ancestor(psitioned relative). If there is no positioned ancestor
+        then it will be positioned relatively to the viewport.
+    */
+    position: absolute;
+    /* we need to apply top, left, bottom, right properties to see any diiference */
+    top: 0;
+    left: 0;
+    /* z-index: 0; */
+}
+
+.relative{
+    background-color: red;
+    /* it changes position relative to it's original position */
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
+
+.fixed{
+    background-color: green;
+    /* It is taken out of the normal document flow and 
+    is always fixed relative to the viewport */
+    /* 
+    As the fixed element is placed after the absolutely positioned
+    element so it will overlap the ABS positoned element.
+    But we can change the order of the element using z-index
+    Default value is 0.
+     */
+    position: fixed;
+    top: 100px;
+}
+
+.sticky{
+ background-color: darkmagenta;   
+ position: sticky;
+ /* stick to the top momentarily when the top reaches 0 after that the top value becomes -ve 
+ if we scroll further to the top. */
+ top: 20px;
+ left: 0;
+}
+
+/**************************** Practice ************************/
+
+/* We can make things disappear from the page by positione them absolute
+and setting top, left, right, bottom properties accordingly(may be negative)
+This will still make the screen reader read the element unlike display:none.
+*/
+
+section{
+    height: 100vh;
+}
+
+.blue{
+    background-color: blue;
+    
+}
+.red{
+    background-color: red;
+   
+}
+.green{
+    background-color: green;
+   
+}
+
+header, footer{
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    font-size: 3rem;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+footer{
+    background-color: black;
+    /* 
+        as it is positioned fixed, it is pulled out of the normal document flow
+        even if footer is a block level element it doen't span the full width
+        so to do that we need to explicitly set the width on the footer.
+        or just set the posotion sticky and bottom 0.
+    */
+    /* position: fixed;
+    bottom: 0; */
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+}
+
+a{
+    color: #fff;
+}
+
+.social{
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+

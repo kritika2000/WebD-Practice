@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=kUMe1FH4CHE
+
+HTML -> hyper text markup language(we have mark up elements).
+-> defines the structure of the website.

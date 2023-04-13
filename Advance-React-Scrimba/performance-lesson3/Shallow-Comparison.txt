@@ -1,0 +1,44 @@
+Primitive types can be strictly equal to one another.
+But Complex types like object and arrays can't, even if
+they have same properties(but are shallow equal) as they occupy separate places
+in memory.
+// ===
+// Primitive types (strings, numbers, booleans)
+// console.log("Hi" === "Hi")
+
+// Complex types (array, object)
+// console.log({name: "Joe"} === {name: "Joe"})
+
+const state = {
+    favNumber: 42,
+    name: "Bob",
+    address: {
+        street: "123 Main Street",
+        city: "Nowhere, PA",
+        zip: 12345
+    }
+}
+
+const state2 = {
+    favNumber: 42,
+    name: "Bob",
+    address: {
+        street: "123 Main Street",
+        city: "Nowhere, PA",
+        zip: 12345
+    }
+}
+
+// console.log(state.favNumber === state2.favNumber)
+// console.log(state.name === state2.name)
+// console.log(state.address === state2.address)
+
+const person = {
+    name: "Sarah"
+}
+
+const anotherPerson = {
+    name: "Sarah"
+}
+
+console.log(anotherPerson === person)

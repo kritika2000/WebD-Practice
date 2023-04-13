@@ -1,0 +1,126 @@
+body{
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   grid-auto-rows: 75px auto 75px;
+   grid-template-areas: 
+   "hd hd hd hd hd hd hd hd hd"
+   "mn mn mn mn mn mn mn sb sb"
+   "ft ft ft ft ft ft ft ft ft"
+   ;
+   gap: 1rem;
+}
+
+.el{
+    display: grid;
+    background-color: purple;
+    color: #fff;
+    place-content: center;
+}
+
+header{
+    grid-area: hd;
+}
+
+main{
+    grid-area: mn;
+}
+
+footer{
+    grid-area: ft;
+}
+
+aside{
+    grid-area: sb;
+}
+
+.container{
+    /* 
+        without grid-template-rows and grid-template-columns,
+        the items are a part of inplicit grid. 
+        By default, the grid has single columns and all rows are
+        a part of implicit grid.
+    */
+    display: grid;
+    /* grid-auto-flow has a default value of row, the items are auto-placed by row 
+    If we want to uto-place items by columns such that when we define explicit
+    row using grid-template-row(say 3) and we have 12 items so 4 columns will
+    be implicitly created.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
+    */
+    /* 
+    browser place the grid items in the grid who have a defined position
+    and then places other items in the DOM order
+    dense property take out the items from the normal DOM order
+    if they can fit in the previously leaved gaps.
+     */
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-auto-rows: minmax(100px, auto);
+ 
+    /* 
+        auto-placement by column
+
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 1fr 2fr);
+        grid-auto-columns: minmax(100px, auto); 
+    */
+    /* gap: .5em; */
+    
+}
+
+.box{
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.box:first-child{
+    background-color: blue;
+    /* grid-column: grid-column-start / grid-column-end */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* grid-row: grid-row-start / grid-row-end */
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3;
+
+    /**************** Box Alignment ******************/
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout */
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    /* place-items align-items justify-items */
+    /* 
+        align the items vertically inside in their own grid cell.
+        automatically sets align-self property to all child elements.
+        by default it is stretch.
+    */
+    align-items: end;
+    /* 
+        it align items horizontally in the grid cell.
+        justify-items by default is stretch i.e the items takes the entire 
+        space in the grid cell 
+    */
+    justify-items: center;
+
+     /* align-content and justify-content property applied on entire grid not
+    on a single cell. */
+    /* align-content: center; */
+    justify-content: center;
+}
+
+
+.box:nth-child(2){
+    background-color: green;
+    grid-column: 1 / 5;
+    /* not required if dense property is applied */
+    /* grid-row: 3 / 5; */
+}
+
+.box.box1 div{
+    background-color: pink;
+}
+
+.box.box1 div:first-child{
+    /* align-self: end; */
+}

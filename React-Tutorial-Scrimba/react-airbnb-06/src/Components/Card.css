@@ -1,0 +1,40 @@
+.card--container{
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    position: relative;
+}
+.image{
+    border-radius: 9px;
+}
+.status{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 3px;
+    border-color: white;
+    background-color: white;
+}
+.logo{
+    height: 10px;
+    width: 12px;
+}
+.review--container{
+    display: flex;
+    width: 45%;
+    height: 20px;
+    justify-content: space-between;
+    margin-top: 5px;
+    gap: 3px;
+    align-items: center;
+}
+.dot::before{
+    content: ' \2022';
+}
+.title{
+    margin: 5px 0;
+}

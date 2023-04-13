@@ -1,0 +1,10 @@
+React render components recursively, i.e. it render the leftmost 
+component at the bottom of the heirarchy first.
+
+If any of the state changes occur at any given component, it rerenders the whole 
+subtree or the components below it even if, the component hasn't passed 
+down the state to its descendents.
+
+This will be very inefficient if the state changes occur at the topmost component
+which we're likely to do, as we lift state up so that it can be accessible to its
+child components and holds a single source of truth.

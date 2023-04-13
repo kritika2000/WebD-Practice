@@ -1,0 +1,62 @@
+* {
+    background-color: azure;
+}
+
+div{
+    background-color: bisque;
+}
+#id1{
+    color: coral;
+}
+.cl1{
+    background-color: lightgreen;
+    font-size: 30px;
+}
+#id1{
+    color: lightpink;
+    /* 1/100 of window size */
+    font-size: 10vh; 
+}
+/* id > class > element> * */
+.box{
+    margin: 20px;
+    padding: 10px; 
+    border: solid black 5px; 
+}
+#div1 {
+    background-color: green;
+}
+#div2 {
+    background-color: lightcoral;
+}
+#div3 {
+background-color: lightskyblue;
+}
+p{
+    /* fixed width */
+    font-family: monospace;
+    font-family: serif;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+li{
+    color: chocolate;
+}
+/* li is direct child ul */
+ul > li{
+    color: aqua;
+}
+ol > li{
+    color: cadetblue;
+}
+/* space means decendent */
+ul li li{
+    font-style: italic;
+    color: blue;
+}
+/* immediate siblings */
+ol + ul {
+    background-color: green;
+}

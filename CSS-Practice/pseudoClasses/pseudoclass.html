@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class</title>
+    <link rel="stylesheet" href="pseudoclass.css" />
+  </head>
+  <body>
+    <a href="####">This is a link!</a>
+    <a href="##">This is link1</a>
+    <a href="#">This is link2</a>
+    <div>
+      <div>
+        <input type="radio" name="my-input" id="yes" />
+        <label for="yes">Yes</label>
+
+        <input type="radio" name="my-input" id="no" />
+        <label for="no">No</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="my-checkbox" id="opt-in" />
+        <label for="opt-in">Check me!</label>
+      </div>
+
+      <select name="my-select" id="fruit">
+        <option value="opt1">Apples</option>
+        <option value="opt2">Grapes</option>
+        <option value="opt3">Pears</option>
+      </select>
+    </div>
+    <input type="text" placeholder="This text is disabled" />
+    <button disabled>Disable Button!</button>
+    <div class="emptyDiv">
+      <p>This is a paragraph</p>
+      <p></p>
+      <p><!-- putting some whitespace --></p>
+    </div>
+    <div class="firstChildDiv">
+      <h1>Heading</h1>
+      <p>Selected</p>
+      <p>Not selected</p>
+      <p>Selected</p>
+      <div>
+        <p>Selected</p>
+        <p>Not Selected</p>
+      </div>
+    </div>
+    <div class="firstOfTypeDiv">
+      <h1>Heading First Of Type</h1>
+      <p>Selected</p>
+      <p>Not selected</p>
+      <p>Selected</p>
+      <div>
+        <p>Selected</p>
+        <p>Not Selected</p>
+      </div>
+    </div>
+    <div class="focusDiv">
+      <input type="text" />
+    </div>
+    <div class="focus-withinDiv">
+      <input type="text" />
+      <input type="email" />
+      <input type="number" min="1" max="10" />
+    </div>
+    <div class="invalidDiv">
+      <input type="email" />
+    </div>
+    <div class="isDiv">
+      <header>
+        <p>This is a header</p>
+      </header>
+      <main>
+        <p>This is the main comtent</p>
+      </main>
+      <footer>
+        <p>This is a footer</p>
+      </footer>
+    </div>
+    <footer>
+      <p>Outer footer</p>
+    </footer>
+    <div class="notDiv">
+      <div class="fancy">This is a fancy div</div>
+      <p class="fancy">This is a fancy para</p>
+      <p class="foo">This ia a foo para</p>
+      <div class="foo">
+        <span>This is a span inside foo</span>
+      </div>
+    </div>
+  </body>
+</html>

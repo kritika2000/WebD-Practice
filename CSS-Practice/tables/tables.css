@@ -1,0 +1,30 @@
+table{
+    border: 1px solid black;
+    height: 300px;
+    width: 800px;
+    /* no space between adjacent borders. */
+    /* border-collapse: collapse; */
+    /* applied on table element only to put spaces between cells */
+    /* border-spacing: 10px; */
+}
+td{
+    /* background-color: antiquewhite; */
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th{
+    background-color: rebeccapurple;
+    color: white;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+   
+}
+
+tr:nth-child(odd){
+    background-color: cornsilk;
+}
+tr:nth-child(even){
+    background-color: white;
+}

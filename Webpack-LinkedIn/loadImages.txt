@@ -1,0 +1,6 @@
+With webpack, we load images by using URL Loader. 
+Webpack inlines a URL to the image bundle, and then 
+returns it from require. 
+
+1. install url loader.
+npm install url-loader --save-dev

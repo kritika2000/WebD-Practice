@@ -1,0 +1,17 @@
+Shallow Comparison -> Compare properties using '===' operator.
+for primitives(say object) we can only shallow compare(===) the properties of two identical objects.
+two objects can't be strictly equal but can be shallow equal.
+
+React uses this concept for optimization.
+
+
+Problem we're addressing -> 
+Whenever state changes occur, react rerenders everything underneath it.
+
+PureComponent:-
+1. Alternative to React.Component
+2. Automatically implements shouldComponentUpdate() for shallow comparisons.
+3. Disallows using shouldComponentUpdate() manually.
+4. Skips rerendering of all children in the tree automatically,
+so they must be 'pure' components as well.
+5. Generally preferred over implementing your own shouldComponentUpdate().

@@ -1,0 +1,23 @@
+/* * selector applies to every element in the body */
+*{
+    color: rebeccapurple;
+}
+div{
+    margin-left: 30px;
+}
+p{
+    background-color: azure;
+}
+/* # for id's */
+#p1{
+    font-family:cursive;
+}
+#p2{
+    color: red;
+}
+.para1{
+    background-color: beige;
+}
+.para2{
+   font-size: 50px;
+}

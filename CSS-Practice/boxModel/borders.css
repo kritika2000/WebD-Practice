@@ -1,0 +1,13 @@
+div{
+    height: 300px;
+    width: 300px;
+    background-image: linear-gradient(to right, purple, pink);
+    margin: 40px;
+    /* one value for circular corner of all 4 sides */
+    /* border-radius: 50px; */
+    /* two values for elliptical corner with horizontal and vertical axis*/
+    /* border-top-left-radius: 100px 150px; */
+    border-style: inset groove ridge outset;
+    border-width: 10px;
+    border-color: red;
+}

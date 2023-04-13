@@ -1,0 +1,13 @@
+Created by Ryan Dahl in 2009.
+
+Node JS is a JS runtime build over V8 Engine just like a web browser.
+JS requires a context to run. In the browser, it is window. In node it is the global object.
+
+Node JS provides a whole lot of modules/APIs, servers(eg:- http) to create full stack apps.
+
+JS Engine -> executes JS code by converting it into machine understandable code.
+JS Runtime -> provide tools(APIs, JS Engine etc) to run the JS code. For eg: browser, Node JS.
+
+Commands:-
+npm install ->  to install a modules
+node filename/filename.js -> execute a file in Node JS.

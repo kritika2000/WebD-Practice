@@ -1,0 +1,21 @@
+.container{
+    background-color: rgb(241, 241, 163);
+    height: 400px;
+    width: 400px;
+    /* in parent to remove space by line break */
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* wrap in reverse direction */
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    /* flex-direction: column-reverse; */
+    justify-content: center;
+}
+.i{
+    border: solid black 2px;
+    display: inline-block;
+    background-color:aquamarine ;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}

@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    width: 550px;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.nav--icon{
+    height: 100%;
+}
+.nav--logo_text{
+    color: #FFF;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 8px;
+}
+.nav--title{
+    color: #FFF;
+    font-family: 'Karla', sans-serif;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 12px;
+}

@@ -1,0 +1,72 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+body{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    /* background-color: #333; */
+    border: 1px solid black;
+    color: #fff;
+    min-width: min-content;
+    /* width: 100px; */
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: 40px;
+    /* as soon as the block elements become the inline-block and they become
+    flex items. */
+    display: flex;
+    /* align items in the main axis. By default it is flex-start */
+    justify-content: space-evenly;
+    gap: 1rem;
+    /* align items on cross axis. by default it is stretch i.e the items
+    will stretch across the main axis if height is not set on the items. */
+    align-items: center;
+    flex-direction: row;
+    /* helps to wrap the items when the window is resized, as the items will overflow
+    if they have bigger size that the container to fit in. */
+    flex-wrap: wrap;
+    /* this is applicable when we have flex items in multiple lines. */
+    align-content: flex-start;
+}
+
+.box{
+    /* sets the minimum width fow the flex item, also
+    we can use flex-basis to set the width of the box, initially it is auto
+    which look as the max content if no width is set. */
+    /* the flex-items will never go below their min-content width
+        and will overflow if the flex items doesn't fit in and flex-shrink 
+        property will also not shrink the itmes below their min-content 
+        width.
+    */
+    /* min-width: 80px; */
+    /* can set the absolute width */
+    /* The flex-item width cannot */
+    /* flex-basis: 40%; */
+    /* 
+        divide the available free space equally between the items 
+        use flex-basis = 0 to give equal size to the items 
+    */
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+    height: 80px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: .5rem;
+    /* center numbers inside the comtainer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:nth-child(2){
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+    /* initial value is 0.
+    If higher it will move to the right depending on the order value of other items.
+    else left. in flex-direction-row.
+    In row-reverse the opposite will happen.
+     */
+    order: -1;
+}
